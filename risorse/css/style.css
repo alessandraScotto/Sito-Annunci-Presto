@@ -1,0 +1,9 @@
+:root {
+    --mainFont:'Roboto', sans-serif;
+    --secFont:'Lato', sans-serif;
+    --colorLight: rgb(248,249,250);
+    --colorWhite: rgb(255,255,255);
+    --grayLight: rgb(52,58,64);
+    --grayDark: rgb(33,37,41);
+
+}

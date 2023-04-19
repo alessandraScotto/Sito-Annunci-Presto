@@ -5,5 +5,26 @@
     --colorWhite: rgb(255,255,255);
     --grayLight: rgb(52,58,64);
     --grayDark: rgb(33,37,41);
+    --mainColor: rgb(141, 123, 104);
+    --secColor: rgb(164, 144, 124);
+    --middleColorBeige: rgb(200, 182, 166);
+    --accColor: rgb(241, 222, 201);
 
 }
+
+@media screen and (min-width:992px) {
+.navbar .container-fluid, .navbar-expanded-lg .navbar-collapse, .navbar-expanded-lg .navbar-nav {
+    flex-direction: column;
+}    
+}
+
+.navbar {
+    display: flex;
+    height: 100vh;
+    width:min-content;
+}
+
+#btnOpenNav {
+    transition: 2s;
+}
+

@@ -1,11 +1,16 @@
 let btnOpenNav = document.querySelector('#btnOpenNav');
 let openNav = document.querySelector('.openNav');
+let offcanvas = document.querySelector('#offcanvas');
+
+
 
 
 btnOpenNav.addEventListener('click', () => {
-    if (btnOpenNav.ariaExpanded == 'true') {
-        openNav.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+    if (!offcanvas.classList.contains('transformCanvas')) {
+        offcanvas.classList.add('transformCanvas');
+        openNav.innerHTML = '<i class="fs-2 fa-solid fa-xmark"></i>';
     } else {
-        openNav.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        offcanvas.classList.remove('transformCanvas');
+        openNav.innerHTML = '<i class="fs-2 fa-solid fa-bars-staggered"></i>';
     }
-});
+ });

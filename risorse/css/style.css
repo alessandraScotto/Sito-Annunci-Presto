@@ -1,10 +1,8 @@
 :root {
-    --mainFont:'Roboto', sans-serif;
-    --secFont:'Lato', sans-serif;
-    --colorLight: rgb(248,249,250);
-    --colorWhite: rgb(255,255,255);
-    --grayLight: rgb(52,58,64);
-    --grayDark: rgb(33,37,41);
+    --colorLight: rgb(248, 249, 250);
+    --colorWhite: rgb(255, 255, 255);
+    --grayLight: rgb(52, 58, 64);
+    --grayDark: rgb(33, 37, 41);
     --mainColor: rgb(141, 123, 104);
     --secColor: rgb(164, 144, 124);
     --middleColorBeige: rgb(200, 182, 166);
@@ -12,19 +10,182 @@
 
 }
 
-@media screen and (min-width:992px) {
-.navbar .container-fluid, .navbar-expanded-lg .navbar-collapse, .navbar-expanded-lg .navbar-nav {
-    flex-direction: column;
-}    
+/*font-family: 'Indie Flower', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Rajdhani', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;*/
+
+* {
+    font-family: 'Rajdhani', sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Navbar and Offcanvas element*/
 .navbar {
-    display: flex;
-    height: 100vh;
-    width:min-content;
+    background-color: var(--grayDark);
+    position: fixed;
+    z-index: 999;
+    width: min-content;
+    right: 0;
+}
+
+.iconNav {
+    color: var(--accColor);
 }
 
 #btnOpenNav {
-    transition: 2s;
+    color: var(--accColor);
 }
 
+.myOffcanvas {
+    position: absolute;
+    right: 0;
+    transition: 1s;
+    transform: translateX(100%);
+    background-color: var(--grayDark);
+}
+
+.transformCanvas {
+    transform: translateX(0%);
+}
+
+.liStyle {
+    letter-spacing: 0.3rem;
+    font-weight: 500;
+}
+
+.list-group-item {
+    transition: 0.4s;
+    position: relative;
+}
+
+.list-group-item:hover:before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background: linear-gradient(to right, var(--mainColor), var(--accColor));
+    animation: animateCanvans linear 2s;
+    animation-duration: 5s;
+
+}
+
+/*Animazione Offcanvas*/
+@keyframes animateCanvans {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+
+/*Animazione button Navbar*/
+
+div span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, var(--accColor), var(--mainColor));
+
+    animation: animate1 3s linear infinite;
+
+}
+
+@keyframes animate1 {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+div span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--accColor), var(--mainColor));
+
+    animation: animate2 3s linear infinite;
+    animation-delay: 1.5s;
+
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+div span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left, var(--accColor), var(--mainColor));
+
+    animation: animate3 3s linear infinite;
+
+
+
+}
+
+@keyframes animate3 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+div span:nth-child(4) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to top, var(--accColor), var(--mainColor));
+
+    animation: animate4 3s linear infinite;
+    animation-delay: 1.5s;
+
+
+}
+
+@keyframes animate4 {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+/*Fine animazione button Navbar*/

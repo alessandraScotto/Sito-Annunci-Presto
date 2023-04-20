@@ -37,6 +37,7 @@ h6 {
     z-index: 999;
     width: min-content;
     right: 0;
+    z-index: 3;
 }
 
 .iconNav {
@@ -53,6 +54,8 @@ h6 {
     transition: 1s;
     transform: translateX(100%);
     background-color: var(--grayDark);
+    z-index: 2;
+    opacity: 0.9;
 }
 
 .transformCanvas {
@@ -189,3 +192,19 @@ div span:nth-child(4) {
 }
 
 /*Fine animazione button Navbar*/
+
+
+
+.wrapper {
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    -ms-transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    width: 100%;
+    height: 100vh;
+}

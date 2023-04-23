@@ -10,6 +10,14 @@
 
 }
 
+.greyLight {
+    color: rgb(52, 58, 64);
+}
+
+.greyDark {
+    color: rgb(33, 37, 41);
+}
+
 /*font-family: 'Indie Flower', cursive;
 font-family: 'Lato', sans-serif;
 font-family: 'Poppins', sans-serif;
@@ -27,18 +35,22 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 /*Navbar and Offcanvas element*/
 .navbar {
     background-color: var(--grayDark);
     position: fixed;
-    z-index: 999;
     width: min-content;
-    right: 0;
     z-index: 3;
 }
+
+
 
 .iconNav {
     color: var(--accColor);
@@ -46,6 +58,10 @@ h6 {
 
 #btnOpenNav {
     color: var(--accColor);
+}
+
+.zIndex {
+    z-index: 2;
 }
 
 .myOffcanvas {
@@ -79,7 +95,7 @@ h6 {
     position: absolute;
     background: linear-gradient(to right, var(--mainColor), var(--accColor));
     animation: animateCanvans linear 2s;
-    animation-duration: 5s;
+    animation-duration: 3s;
 
 }
 
@@ -194,8 +210,8 @@ div span:nth-child(4) {
 /*Fine animazione button Navbar*/
 
 
-
-.wrapper {
+/*Posizionamento immagini Header */
+.devices-wrapper {
     -webkit-transform: translateY(-50%) rotate(45deg);
     -ms-transform: translateY(-50%) rotate(45deg);
     transform: translateY(-50%) rotate(45deg);
@@ -203,8 +219,161 @@ div span:nth-child(4) {
     -ms-transform-origin: center;
     transform-origin: center;
     position: absolute;
-    top: 80%;
-    left: 40%;
-    width: 100%;
-    height: 100vh;
+
+    top: 40%;
+    left: 45%;
+    width: 75.25rem;
+    height: 85.25rem;
+}
+
+.devices-wrapper .headerBici {
+    right: 0%;
+    bottom: 0%;
+}
+
+.devices-wrapper [class*=headerBici] {
+    width: 30%;
+    position: absolute;
+}
+
+
+.devices-wrapper .device {
+    width: 100% !important;
+    border-radius: 0.5rem;
+    border: 0.25rem solid rgba(190, 190, 190, .1);
+    -webkit-box-shadow: 0.125rem 0.125rem 1.25rem 0 rgba(0, 0, 0, .3);
+    box-shadow: 0.125rem 0.125rem 1.25rem 0 rgba(0, 0, 0, .3);
+    width: 6.25rem;
+
+}
+
+img {
+    vertical-align: middle;
+    overflow: clip;
+}
+
+
+.devices-wrapper .headerCoffe {
+    left: -3%;
+    top: 8%;
+}
+
+.devices-wrapper [class*=headerCoffe] {
+    width: 45%;
+    position: absolute;
+}
+
+.devices-wrapper .headerBook {
+    left: 43%;
+    top: 28%;
+}
+
+.devices-wrapper [class*=headerBook] {
+    width: 25%;
+    position: absolute;
+}
+
+.devices-wrapper .headerRose {
+    left: 70%;
+    top: 35%;
+}
+
+.devices-wrapper [class*=headerRose] {
+    width: 25%;
+    position: absolute;
+}
+
+
+
+.devices-wrapper .headerApple {
+    left: 43%;
+    top: 0%;
+}
+
+.devices-wrapper [class*=headerApple] {
+    width: 44%;
+    position: absolute;
+}
+
+/*Fine posizionamento immagini Header */
+
+/*Animazione immagini Header*/
+.paddignH1 {
+    padding-left: 100px;
+}
+
+
+.transformImg {
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.imgTransition {
+    transition: 1s;
+}
+
+.imgTransitionCoffe {
+    transition-delay: 0.4s;
+}
+
+.imgTransitionBook {
+    transition-delay: 0.6s;
+
+}
+
+.imgTransitionRose {
+    transition-delay: 0.7s;
+
+}
+
+
+.imgTransitionBike {
+    transition-delay: 0.8s;
+
+}
+
+.imgTransitionApple {
+    transition-delay: 0.9s;
+
+}
+
+/*Fine animazione immagini Header*/
+
+/*First Section and Carousel*/
+
+.h3BorderFirst {
+    border-bottom: 2px solid var(--mainColor);
+
+}
+
+.h3Border {
+    border: double var(--mainColor);
+    padding: 5px;
+}
+
+
+.backgroundCarousel {
+ background-image: url(../img/Background-SecondSection.jpg);
+ background-size: cover;
+}
+
+.borderCarousel {
+    background-color: white;
+    border: solid 2px white;
+    padding: 6px;
+}
+
+/*Seconda sezione - Card */
+
+.iconCardStyle {
+    color: rgba(19, 113, 0, 0.637);
+}
+
+.cardStyle {
+    border: none;
+    padding: 5px;
+}
+
+.btnStyle {
+    border: 1px solid var(--mainColor);
+    color: var(--grayDark);
 }

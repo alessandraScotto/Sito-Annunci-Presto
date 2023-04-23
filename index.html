@@ -22,11 +22,34 @@
     <link rel="stylesheet" href="./risorse/css/style.css">
 </head>
 
-<body class="overflow-hidden">
+<body>
     <nav>
-        <div class="navbar d-flex flex-column vh-100 justify-content-between">
+        <div class="position-fixed vh-100 w-100 zIndex">
+            <div id="offcanvas" class="myOffcanvas vh-100 w-50">
+                <ul class="vh-100 overflow-hidden ps-0 d-flex flex-column justify-content-center">
+                    <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
+                            href="#">Home</a>
+                    </li>
+                    <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
+                            href="#">Annunci</a>
+                    </li>
+                    <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
+                            href="#">Portfolio</a>
+                    </li>
+                    <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
+                            href="#">Contact
+                            us</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div class="navbar d-flex flex-column end-0 vh-100 justify-content-between">
             <a class="navbar-brand m-0 d-flex align-items-start justify-content-center" href="#"><img
-                    src="./risorse/img/Logo.png" width="70px" alt=""></a>
+                    src="./risorse/img/Logo.png" width="70px" alt="Logo"></a>
             <div class="position-relative overflow-hidden  d-flex align-items-center justify-content-center">
                 <span></span>
                 <span></span>
@@ -42,45 +65,115 @@
             <div class="d-flex align-items-end justify-content-center"><i class="iconNav fa-solid fa-heart fs-2"></i>
             </div>
         </div>
-        <div id="offcanvas" class="myOffcanvas vh-100 w-25">
-            <ul class="vh-100 overflow-hidden ps-0 d-flex flex-column justify-content-center">
-                <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
-                        href="#">Home</a>
-                </li>
-                <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
-                        href="#">Annunci</a>
-                </li>
-                <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
-                        href="#">Portfolio</a>
-                </li>
-                <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2" href="#">Contact
-                        us</a>
-                </li>
 
-            </ul>
-        </div>
     </nav>
 
-    <header class="container-fluid  w-100">
 
-        <div class="wrapper bg-danger position-relative">
-            <div class="">
-                <img class="" src="./risorse/img/Header1.jpg" width="400px" alt="">
+    <header class="main min-vh-100">
+        <section class="py-0 overflow-hidden bg-white position-relative d-block">
+            <div class="container-fluid position-relative w-100 ms-auto me-auto d-block">
+                <div class="devices-wrapper bg-transparent d-block">
+                    <div class="headerBici imgTransition imgTransitionBike d-block">
+                        <img class="device" src="./risorse/img/Header1.jpg" alt="">
+                    </div>
+                    <div class="headerCoffe imgTransition imgTransitionCoffe d-block">
+                        <img class="device" src="./risorse/img/Header2.jpg" alt="">
+                    </div>
+                    <div class="headerBook imgTransition imgTransitionBook d-block">
+                        <img class="device" src="./risorse/img/Header3.jpg" alt="">
+                    </div>
+                    <div class="headerRose imgTransition imgTransitionRose d-block">
+                        <img class="device" src="./risorse/img/Header4.jpg" alt="">
+                    </div>
+                    <div class="headerApple imgTransition imgTransitionApple d-block">
+                        <img class="device" src="./risorse/img/Header5.jpg" alt="">
+                    </div>
+                </div>
+
+
+                <div class="row headerIndex py-8 min-vh-100 align-items-center">
+                    <div class="paddignH1 col-md-auto">
+                        <h1 class="logoObserve display-1 greyLight fs-sm-4 fs-md-5 fw-bold"> Look like and<strong
+                                class="fst-italic fw-light">
+                                expert </strong> <br>
+                            right from the start</h1>
+                        <p class="fs-1 mt-3 greyDark">Head start your stylish website with a gorgeous template </p>
+                    </div>
+
+                </div>
+
             </div>
-            <div class="">
-                <img class="" src="./risorse/img/Header1.jpg" width="400px" alt="">
-            </div>
-        </div>
-        <div class="row py-8 min-vh-100 align-items-center">
-            <div class="col-md-auto px-md-4 ps-md-8">
-                <h1 class="display-4 fs-1 fs-sm-4 fs-md-5">Look like an expert right from the start</h1>
-            </div>
-
-        </div>
-      
-
-
+        </section>
     </header>
+
+    <main>
+        <!--Prima Sezione-->
+        <section class="container-fluid">
+            <div class="row justify-content-evenly backgroundCarousel">
+                <div class="col-5 d-flex flex-column align-items-center justify-content-center position-relative">
+                    <h3 class="text-uppercase greyLight h3BorderFirst">Sell Anything</h3>
+                    <h2 class="my-5 fw-bold display-1 text-center greyDark">All you need to power your online store</h2>
+                    <p class="greyLight fs-2 h3Border">Our powerful platform helps your business grow.</p>
+                </div>
+                <!--Carousel Section-->
+                <div class="col-md-5 col-12 position-relative">
+                    <div id="carouselExampleIndicators" class="carousel slide p-3" data-bs-ride="true">
+                        <div class="carousel-indicators pb-4">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner rounded-4 borderCarousel">
+                            <div class="carousel-item active">
+                                <img src="./risorse/img/Img1.jpg" class="rounded-4 d-block w-100 vh-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./risorse/img/Img2.jpg" class="rounded-4 d-block w-100 vh-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./risorse/img/Img3.jpg" class="rounded-4 d-block w-100 vh-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Seconda Sezione-->
+        <section class="bg-light">
+            <div class="row">
+                <div class="col-12 text-center pt-5">
+                    <h2 class="fs-1">Our Features</h2>
+                    <p class="fs-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, omnis. <br> Nihil
+                        magnam sed
+                        repudiandae reprehenderit doloribus molestias adipisci.</p>
+                </div>
+                <div class="row justify-content-around align-items-center">
+                    <div class="col-2">
+                        <div class="card cardStyle" style="width: 18rem;">
+                            <div class="display-2 text-center iconCardStyle">
+                                <i class="fa-brands fa-pagelines"></i>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title fs-4">Natural Process</h5>
+                                <p class="card-text fs-5">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam
+                                    justo sed vero dolor duo.
+                                </p>
+                                <a href="#"><button class="btn btnStyle fw-semibold fs-5">Go somewhere</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
 
 
 

@@ -478,3 +478,27 @@ img {
     transform: scale(1.1);
     border-radius: 0%;
 }
+
+/*Footer*/
+.footerSocialCol {
+    border-right: solid 2px var(--middleColorBeige);
+}
+
+.borderIcon{
+    border: solid 2px var(--mainColor);
+    border-radius: 50%;
+    padding: 10px;
+    color: var(--mainColor);
+}
+
+.borderIcon:hover {
+    background-color: var(--mainColor);
+    color: var(--colorWhite);
+    transform: rotateY(360deg);
+	animation: rotateAnimation 1s linear;
+}
+
+@keyframes rotateAnimation {
+	from {transform: rotateY(45deg);}
+	to {transform: rotateY(360deg);}
+}

@@ -45,7 +45,7 @@ let imgTransitionCoffe = document.querySelector('imgTransitionCoffe');
 
 transformScroll()*/
 
-// Lieve animazione immagini Header allo scroll
+// Animazione immagini Header allo scroll
 let observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -64,3 +64,24 @@ let observer = new IntersectionObserver((entries) => {
 });
 
 observer.observe(logoObserve);
+
+//Animazione Cards - Second Section
+
+//element
+let elementToWatch =  document.querySelectorAll('.watch')
+//callback
+let callback = function (items) {
+    items.forEach((item) => {
+        if (item.isIntersecting) {
+            item.target.classList.add('inPage');
+        } else {
+            item.target.classList.remove('inPage');
+        }
+    });
+}
+//observer
+let observer2 = new IntersectionObserver (callback, {threshold: 0.7});
+//apply
+elementToWatch.forEach ((element) => {
+    observer2.observe(element);
+});

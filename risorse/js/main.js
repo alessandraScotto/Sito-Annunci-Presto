@@ -85,3 +85,15 @@ let observer2 = new IntersectionObserver (callback, {threshold: 0.7});
 elementToWatch.forEach ((element) => {
     observer2.observe(element);
 });
+
+// Sezione Numbers e setInterval
+
+function createInterval() {
+    let counter= 0;
+    let interval = setInterval (() => {
+        if (counter < 100) {
+            counter++;
+            
+        }
+    })
+}

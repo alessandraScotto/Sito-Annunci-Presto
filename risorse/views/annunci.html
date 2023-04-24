@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Annunci - presto</title>
+    <!--Fontawesome Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Rajdhani:wght@300;400;500;600;700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <!--My style CSS-->
+    <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+
+<body>
+
+    <nav>
+        <!--Offcanvas-->
+        <div id="offcanvas" class="myOffcanvas position-fixed vh-100 w-50">
+            <ul class="vh-100 overflow-hidden ps-0 d-flex flex-column justify-content-center">
+                <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
+                        href="#">Home</a>
+                </li>
+                <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
+                        href="#">Annunci</a>
+                </li>
+                <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
+                        href="#">Portfolio</a>
+                </li>
+                <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2" href="#">Contact
+                        us</a>
+                </li>
+
+            </ul>
+        </div>
+
+
+        <!--Navbar-->
+        <div class="navbarAnnunci position-fixed w-100 d-flex justify-content-between">
+            <a class="navbar-brand m-0 d-flex align-items-center" href="#"><img src="../img/Logo.png" width="70px"
+                    alt="Logo"></a>
+
+            <div class="d-flex">
+                <div class="d-flex align-items-end justify-content-center"><i
+                        class="iconNav p-3 fa-solid fa-heart fs-4"></i>
+                </div>
+                <div class="position-relative overflow-hidden me-2 d-flex align-items-center justify-content-center">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <button id="btnOpenNav" class="fs-3 btn border-0 d-flex align-items-center justify-content-center"
+                        type="button">
+                        <div class="openNav d-flex justify-content-center align-items-center p-1">
+                            <i class="fs-2 fa-solid fa-bars-staggered"></i>
+                        </div>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!--Footer-->
+    <footer class="container-fluid h-50">
+        <div class="row vh-100 align-items-center justify-content-evenly">
+            <div class="col-md-2 col-12 footerSocialCol">
+                <div class="row">
+                    <div class="col-12 mb-4">
+                        <div class="iconFooter text-center">
+                            <a href=""> <i class="borderIcon fs-2 fa-brands fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-4">
+                        <div class="iconFooter text-center">
+                            <a href=""><i class="borderIcon fs-2 fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-4">
+                        <div class="iconFooter text-center">
+                            <a href=""><i class="borderIcon fs-2 fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="iconFooter text-center">
+                            <a href=""><i class="borderIcon fs-2 fa-brands fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-12 h-25 d-flex flex-column justify-content-center footerSocialCol">
+                <h3 class="fs-2 text-uppercase">Company</h3>
+                <p class="fs-4">Lorem ipsum</p>
+                <p class="fs-4">Dolor sit amet</p>
+                <p class="fs-4">Sed odio cras</p>
+                <p class="fs-4">Donec sed dui</p>
+            </div>
+            <div class="col-md-2 col-12 h-25 d-flex flex-column justify-content-center footerSocialCol">
+                <h3 class="fs-2 text-uppercase">Products</h3>
+                <p class="fs-4">Lorem ipsum</p>
+                <p class="fs-4">Dolor sit amet</p>
+                <p class="fs-4">Sed odio cras</p>
+                <p class="fs-4">Donec sed dui</p>
+            </div>
+            <div class="col-md-2 col-12 h-25 d-flex flex-column justify-content-center footerSocialCol">
+                <h3 class="fs-2 text-uppercase">Resources</h3>
+                <p class="fs-4">Lorem ipsum</p>
+                <p class="fs-4">Dolor sit amet</p>
+                <p class="fs-4">Sed odio cras</p>
+                <p class="fs-4">Donec sed dui</p>
+            </div>
+        </div>
+    </footer>
+
+    </main>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="../js/annunci.js"></script>
+</body>
+
+</html>

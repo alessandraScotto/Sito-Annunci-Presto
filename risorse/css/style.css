@@ -38,6 +38,8 @@ h6 {
     font-family: 'Raleway', sans-serif;
 }
 
+
+
 body {
     overflow-x: hidden;
 }
@@ -501,4 +503,12 @@ img {
 @keyframes rotateAnimation {
 	from {transform: rotateY(45deg);}
 	to {transform: rotateY(360deg);}
+}
+
+
+/*Sezione Annunci*/
+.navbarAnnunci {
+    background-color: var(--grayDark);
+    height: min-content;
+  
 }

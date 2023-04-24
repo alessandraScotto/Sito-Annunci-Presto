@@ -59,7 +59,6 @@ let observer = new IntersectionObserver((entries) => {
             })
 
         }
-        console.log(entry);
     })
 });
 
@@ -68,7 +67,7 @@ observer.observe(logoObserve);
 //Animazione Cards - Second Section
 
 //element
-let elementToWatch =  document.querySelectorAll('.watch')
+let elementToWatch = document.querySelectorAll('.watch')
 //callback
 let callback = function (items) {
     items.forEach((item) => {
@@ -80,20 +79,43 @@ let callback = function (items) {
     });
 }
 //observer
-let observer2 = new IntersectionObserver (callback, {threshold: 0.7});
+let observer2 = new IntersectionObserver(callback, { threshold: 0.7 });
 //apply
-elementToWatch.forEach ((element) => {
+elementToWatch.forEach((element) => {
     observer2.observe(element);
 });
 
-// Sezione Numbers e setInterval
+// Sezione Numbers - setInterval - observerIntersection
+let firstNumber = document.querySelector('#firstNumber');
+let secondNumber = document.querySelector('#secondNumber');
+let thirdNumber = document.querySelector('#thirdNumber');
+let endNumber = document.querySelector('#endNumber');
 
-function createInterval() {
-    let counter= 0;
-    let interval = setInterval (() => {
-        if (counter < 100) {
+function createInterval(element, final, frequency) {
+    let counter = 0;
+    let interval = setInterval(() => {
+        if (counter < final) {
             counter++;
-            
+            element.innerHTML = counter;
+        } else {
+            clearInterval(interval);
         }
-    })
+    }, frequency);
 }
+
+
+let isChecked = false;
+let observer3 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && isChecked == false) {
+            createInterval(firstNumber, 100, 50);
+            createInterval(secondNumber, 275, 20);
+            createInterval(thirdNumber, 300, 20);
+            createInterval(endNumber, 1850, 1);
+            isChecked = true;
+        } 
+    })
+});
+
+observer3.observe(firstNumber);
+

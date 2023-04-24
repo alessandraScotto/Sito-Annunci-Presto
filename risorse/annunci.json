@@ -1,0 +1,225 @@
+[ 
+    {
+        "id":1,
+        "name": "T-shirt",
+        "category": "Lana",
+        "price": "120.12",
+        "img" : "ImgJsonMaglia.jpg"
+    },
+    {
+        "id": 2,
+        "name": "T-shirt",
+        "category": "Lana",
+        "price": "200.32",
+        "img" : "ImgJsonMaglia.jpg"
+
+    },
+    {
+        "id": 3,
+        "name": "T-shirt",
+        "category": "Lana",
+        "price": "20.15",
+        "img" : "ImgJsonMaglia.jpg"
+
+    },
+    {
+        "id": 4,
+        "name": "T-shirt",
+        "category": "Lana",
+        "price": "300.54",
+        "img" : "ImgJsonMaglia.jpg"
+
+    },
+    {
+        "id": 5,
+        "name": "T-shirt",
+        "category": "Cotton",
+        "price": "10.42",
+        "img" : "ImgJsonMaglia.jpg"
+
+    },
+    {
+        "id": 6,
+        "name": "T-shirt",
+        "category": "Cotton",
+        "price":"400.64",
+        "img" : "ImgJsonMaglia.jpg"
+
+    },
+    {
+        "id": 7,
+        "name": "T-shirt",
+        "category": "Cotton",
+        "price":"30.45",
+        "img" : "ImgJsonMaglia.jpg"
+
+    },
+    {
+        "id": 8,
+        "name": "Shoes",
+        "category": "Skin",
+        "price": "15.64",
+        "img" : "ImgJsonShoes.jpg"
+
+    },
+    {
+        "id": 9,
+        "name": "Shoes",
+        "category": "Skin",
+        "price": "230.42",
+        "img" : "ImgJsonShoes.jpg"
+
+    },
+    {
+        "id": 10,
+        "name": "Shoes",
+        "category": "Cotton",
+        "price": "257.02",
+        "img" : "ImgJsonShoes.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Shoes",
+        "category": "Linen",
+        "price": "30.12",
+        "img" : "ImgJsonShoes.jpg"
+
+    },
+    {
+        "id": 12,
+        "name": "Hat",
+        "category": "Skin",
+        "price": "55.54",
+        "img" : "ImgJsonMaglia.jpg"
+
+    },
+    {
+        "id": 13,
+        "name": "Scard",
+        "category": "Linen",
+        "price": "5.23",
+        "img" : "ImgJsonSciarpa.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Socks",
+        "category": "Cotton",
+        "price": "7.65",
+        "img" : "ImgJsonSocks.jpg"
+    },
+    {
+        "id": 15,
+        "name": "Socks",
+        "category": "Lana",
+        "price": "23.45",
+        "img" : "ImgJsonSocks.jpg"
+
+    },
+    {
+        "id": 16,
+        "name": "Sweatshirt",
+        "category": "Lana",
+        "price": "300.62",
+        "img" : "ImgJsonMaglia.jpg"
+
+    },
+    {
+        "id": 17,
+        "name": "Sweatshirt",
+        "category": "Lana",
+        "price": "120.65",
+        "img" : "ImgJsonMaglia.jpg"
+
+    },
+    {
+        "id": 18,
+        "name": "Pant",
+        "category": "Cotton",
+        "price": "12.13",
+        "img" : "ImgJsonJeans.jpg"
+
+    },
+    {
+        "id": 19,
+        "name": "Gloves - Cotton",
+        "category": "Cotton",
+        "price": "90.64",
+        "img" : "ImgJsonGloves.jpg"
+    },
+
+    {
+        "id": 21,
+        "name": "Gloves Lana",
+        "category": "Lana",
+        "price": "22.04",
+        "img" : "ImgJsonGloves.jpg"
+
+    },
+    {
+        "id": 22,
+        "name": "Rug",
+        "category": "Lana",
+        "price": "600.63",
+        "img" : "ImgJsonTappeto.jpg"
+    },
+    {
+        "id": 23,
+        "name": "Legs",
+        "category": "Jeans",
+        "price": "30.43",
+        "img" : "ImgJsonJeans.jpg"
+    },
+    {
+        "id": 24,
+        "name": "Legs",
+        "category": "Jeans Dark",
+        "price": "99.93",
+        "img" : "ImgJsonJeans.jpg"
+    },
+    {
+        "id": 25,
+        "name": "Dress",
+        "category": "Linen",
+        "price": "120.93",
+        "img" : "ImgJsonDress.jpg"
+    },
+    {
+        "id": 26,
+        "name": "Dress",
+        "category": "Seta",
+        "price": "260.42",
+        "img" : "ImgJsonDress.jpg"
+
+    },
+    {
+        "id": 27,
+        "name": "Skirt",
+        "category": "Lana",
+        "price": "430.43",
+        "img" : "ImgJsonSkirt.jpg"
+    },
+    {
+        "id": 28,
+        "name": "Skirt",
+        "category": "Seta",
+        "price": "520.63",
+        "img" : "ImgJsonSkirt.jpg"
+
+    },
+    {
+        "id": 29,
+        "name": "Earrings",
+        "category": "Gold",
+        "price": "300.55",
+        "img" : "ImgJsonErrings.jpg"
+
+    },
+    {
+        "id": 30,
+        "name": "Earrings",
+        "category": "Copper",
+        "price": "210.12",
+        "img" : "ImgJsonErrings.jpg"
+
+    }
+]

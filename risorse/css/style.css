@@ -512,3 +512,15 @@ img {
     height: min-content;
   
 }
+
+.borderStyle {
+    border: double var(--middleColorBeige);
+}
+
+.borderStyle2{
+    border-bottom: solid 2px var(--middleColorBeige);
+}
+
+.borderStylePrice{
+    border: double var(--middleColorBeige);
+}

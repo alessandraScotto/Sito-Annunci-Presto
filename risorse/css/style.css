@@ -524,3 +524,21 @@ img {
 .borderStylePrice{
     border: double var(--middleColorBeige);
 }
+
+.textJustify {
+    text-align: justify;
+}
+
+.strongText {
+    color: var(--middleColorBeige);
+}
+
+.borderStyleAccordion{
+    border: none;
+    border-bottom: 2px solid var(--middleColorBeige);
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--colorWhite);
+    background-color: var(--middleColorBeige);
+}

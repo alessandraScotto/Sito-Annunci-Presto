@@ -11,7 +11,7 @@
         "name": "T-shirt",
         "category": "Lana",
         "price": "200.32",
-        "img" : "ImgJsonMaglia.jpg"
+        "img" : "ImgJsonMaglia1.jpg"
 
     },
     {
@@ -19,7 +19,7 @@
         "name": "T-shirt",
         "category": "Lana",
         "price": "20.15",
-        "img" : "ImgJsonMaglia.jpg"
+        "img" : "ImgJsonMaglia2.jpg"
 
     },
     {
@@ -27,7 +27,7 @@
         "name": "T-shirt",
         "category": "Lana",
         "price": "300.54",
-        "img" : "ImgJsonMaglia.jpg"
+        "img" : "ImgJsonMaglia3.jpg"
 
     },
     {
@@ -35,7 +35,7 @@
         "name": "T-shirt",
         "category": "Cotton",
         "price": "10.42",
-        "img" : "ImgJsonMaglia.jpg"
+        "img" : "ImgJsonMaglia4.jpg"
 
     },
     {
@@ -43,7 +43,7 @@
         "name": "T-shirt",
         "category": "Cotton",
         "price":"400.64",
-        "img" : "ImgJsonMaglia.jpg"
+        "img" : "ImgJsonMaglia5.jpg"
 
     },
     {
@@ -51,7 +51,7 @@
         "name": "T-shirt",
         "category": "Cotton",
         "price":"30.45",
-        "img" : "ImgJsonMaglia.jpg"
+        "img" : "ImgJsonMaglia6.jpg"
 
     },
     {
@@ -67,7 +67,7 @@
         "name": "Shoes",
         "category": "Skin",
         "price": "230.42",
-        "img" : "ImgJsonShoes.jpg"
+        "img" : "ImgJsonShoes2.jpg"
 
     },
     {
@@ -75,14 +75,14 @@
         "name": "Shoes",
         "category": "Cotton",
         "price": "257.02",
-        "img" : "ImgJsonShoes.jpg"
+        "img" : "ImgJsonShoes3.jpg"
     },
     {
         "id": 11,
         "name": "Shoes",
         "category": "Linen",
         "price": "30.12",
-        "img" : "ImgJsonShoes.jpg"
+        "img" : "ImgJsonShoes4.jpg"
 
     },
     {
@@ -90,13 +90,13 @@
         "name": "Hat",
         "category": "Skin",
         "price": "55.54",
-        "img" : "ImgJsonMaglia.jpg"
+        "img" : "ImgJsonMaglia7.jpg"
 
     },
     {
         "id": 13,
         "name": "Scard",
-        "category": "Linen",
+        "category": "Lana",
         "price": "5.23",
         "img" : "ImgJsonSciarpa.jpg"
     },
@@ -104,8 +104,8 @@
         "id": 14,
         "name": "Socks",
         "category": "Cotton",
-        "price": "7.65",
-        "img" : "ImgJsonSocks.jpg"
+        "price": "2.65",
+        "img" : "ImgJsonSocks1.jpg"
     },
     {
         "id": 15,
@@ -120,7 +120,7 @@
         "name": "Sweatshirt",
         "category": "Lana",
         "price": "300.62",
-        "img" : "ImgJsonMaglia.jpg"
+        "img" : "ImgJsonMaglia9.jpg"
 
     },
     {
@@ -128,7 +128,7 @@
         "name": "Sweatshirt",
         "category": "Lana",
         "price": "120.65",
-        "img" : "ImgJsonMaglia.jpg"
+        "img" : "ImgJsonMaglia8.jpg"
 
     },
     {
@@ -136,7 +136,7 @@
         "name": "Pant",
         "category": "Cotton",
         "price": "12.13",
-        "img" : "ImgJsonJeans.jpg"
+        "img" : "ImgJsonPant.jpg"
 
     },
     {
@@ -144,7 +144,7 @@
         "name": "Gloves - Cotton",
         "category": "Cotton",
         "price": "90.64",
-        "img" : "ImgJsonGloves.jpg"
+        "img" : "ImgJsonGloves1.jpg"
     },
 
     {
@@ -167,7 +167,7 @@
         "name": "Legs",
         "category": "Jeans",
         "price": "30.43",
-        "img" : "ImgJsonJeans.jpg"
+        "img" : "ImgJsonJeans1.jpg"
     },
     {
         "id": 24,
@@ -188,7 +188,7 @@
         "name": "Dress",
         "category": "Seta",
         "price": "260.42",
-        "img" : "ImgJsonDress.jpg"
+        "img" : "ImgJsonDress1.jpg"
 
     },
     {
@@ -196,14 +196,14 @@
         "name": "Skirt",
         "category": "Lana",
         "price": "430.43",
-        "img" : "ImgJsonSkirt.jpg"
+        "img" : "ImgJsonSkirt1.jpg"
     },
     {
         "id": 28,
         "name": "Skirt",
         "category": "Seta",
         "price": "520.63",
-        "img" : "ImgJsonSkirt.jpg"
+        "img" : "ImgJsonSkirt2.jpg"
 
     },
     {
@@ -211,7 +211,7 @@
         "name": "Earrings",
         "category": "Gold",
         "price": "300.55",
-        "img" : "ImgJsonErrings.jpg"
+        "img" : "ImgJsonErrings1.jpg"
 
     },
     {
@@ -221,5 +221,113 @@
         "price": "210.12",
         "img" : "ImgJsonErrings.jpg"
 
+    },
+    {
+        "id": 31,
+        "name": "Shoes",
+        "category": "Skin",
+        "price": "230.42",
+        "img" : "ImgJsonShoes5.jpg"
+
+    },
+    {
+        "id": 31,
+        "name": "Dress",
+        "category": "Seta",
+        "price": "120.93",
+        "img" : "ImgJsonDress2.jpg"
+    },
+    {
+        "id": 32,
+        "name": "Dress",
+        "category": "Seta",
+        "price": "120.93",
+        "img" : "ImgJsonDress3.jpg"
+    },
+    {
+        "id": 33,
+        "name": "Skirt",
+        "category": "Seta",
+        "price": "520.63",
+        "img" : "ImgJsonSkirt3.jpg"
+
+    },
+    {
+        "id": 34,
+        "name": "Skirt",
+        "category": "Seta",
+        "price": "520.63",
+        "img" : "ImgJsonSkirt4.jpg"
+
+    },
+    {
+        "id": 35,
+        "name": "Scard",
+        "category": "Linen",
+        "price": "5.23",
+        "img" : "ImgJsonSciarpa1.jpg"
+    },
+    {
+        "id": 36,
+        "name": "TimeX",
+        "category": "Object Vintage",
+        "price": "140.23",
+        "img" : "ImgJsonTime.jpg"
+    },
+    {
+        "id": 37,
+        "name": "Stampa Vintage",
+        "category": "Object Vintage",
+        "price": "25.23",
+        "img" : "ImgJsonStampa.jpg"
+    },
+    {
+        "id": 38,
+        "name": "Macchina da scrivere",
+        "category": "Object Vintage",
+        "price": "25.23",
+        "img" : "ImgJsonTimeMacchina2.jpg"
+    },
+    {
+        "id": 39,
+        "name": "Radio",
+        "category": "Object Vintage",
+        "price": "25.23",
+        "img" : "ImgJsonRadio.jpg"
+    },
+    {
+        "id": 40,
+        "name": "Cartoline OldStyle",
+        "category": "Object Vintage",
+        "price": "25.23",
+        "img" : "ImgJsonCartoline.jpg"
+    },
+    {
+        "id": 41,
+        "name": "Old Maps",
+        "category": "Object Vintage",
+        "price": "25.23",
+        "img" : "ImgJsonMappe.jpg"
+    },
+    {
+        "id": 42,
+        "name": "Polaroid",
+        "category": "Object Vintage",
+        "price": "25.23",
+        "img" : "ImgJsonPolaroid2.jpg"
+    },
+    {
+        "id": 43,
+        "name": "Proiettore",
+        "category": "Object Vintage",
+        "price": "25.23",
+        "img" : "ImgJsonProiettore.jpg"
+    },
+    {
+        "id": 44,
+        "name": "Giradischi",
+        "category": "Object Vintage",
+        "price": "25.23",
+        "img" : "ImgJsonTimeGiradischi.jpg"
     }
 ]

@@ -1,10 +1,10 @@
 :root {
     --colorLight: rgb(248, 249, 250);
-    --colorWhite: rgb(255, 255, 255);
+    --colorWhite: #ffffff;
     --grayLight: rgb(52, 58, 64);
     --grayDark: rgb(33, 37, 41);
-    --mainColor: rgb(141, 123, 104);
-    --secColor: rgb(164, 144, 124);
+    --mainColor: #8d7b68;
+    --secColor: #a4907c;
     --middleColorBeige: rgb(200, 182, 166);
     --accColor: rgb(241, 222, 201);
 
@@ -115,7 +115,7 @@ body {
 
 /*Animazione button Navbar*/
 
-div span:nth-child(1) {
+div > span:nth-child(1) {
     position: absolute;
     top: 0;
     left: 0;
@@ -137,7 +137,7 @@ div span:nth-child(1) {
     }
 }
 
-div span:nth-child(2) {
+div > span:nth-child(2) {
     position: absolute;
     top: 0;
     right: 0;
@@ -160,7 +160,7 @@ div span:nth-child(2) {
     }
 }
 
-div span:nth-child(3) {
+div > span:nth-child(3) {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -184,7 +184,7 @@ div span:nth-child(3) {
     }
 }
 
-div span:nth-child(4) {
+div > span:nth-child(4) {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -510,6 +510,7 @@ img {
 .navbarAnnunci {
     background-color: var(--grayDark);
     height: min-content;
+    z-index: 9;
   
 }
 
@@ -541,4 +542,33 @@ img {
 .accordion-button:not(.collapsed) {
     color: var(--colorWhite);
     background-color: var(--middleColorBeige);
+}
+
+.imgCards{
+    height: 300px;
+    width: 200px;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url(../img/chevron-up-solid.svg);
+    transform: rotateZ(0deg);
+}
+
+.accordion-button::after {
+background-image: url(../img/chevron-down-solid.svg);
+}
+
+.form-check-input:checked {
+    background-color: var(--mainColor);
+    border-color: var(--mainColor);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
 }

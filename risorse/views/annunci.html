@@ -102,89 +102,82 @@
         <!--Section Cards Articoli-->
         <section class="vh-100">
             <div class="container-fluid">
-                <div class="row wrapper">
+                <div class="row">
                     <div class="col-12 col-md-3">
+                        <!--Accordion-->
                         <div class="accordion" id="accordionExample">
                             <div class="accordion-item borderStyleAccordion">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button id="styleBtn" class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <h2 class="accordion-header " id="headingOne">
+                                    <button id="styleBtn" class="accordion-button position-relative fs-5" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">
                                         All categories
+
                                     </button>
+
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>This is the first item's accordion body.</strong> It is shown by
-                                        default, until the collapse plugin adds the appropriate classes that we use to
-                                        style each element. These classes control the overall appearance, as well as the
-                                        showing and hiding via CSS transitions. You can modify any of this with custom
-                                        CSS or overriding our default variables. It's also worth noting that just about
-                                        any HTML can go within the <code>.accordion-body</code>, though the transition
-                                        does limit overflow.
+                                    <div id="radioContainer" class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="categories" id="All" checked>
+                                            <label class="form-check-label" for="All">
+                                                All categories
+                                            </label>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item borderStyleAccordion">
                                 <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Accordion Item #2
+                                    <button class="accordion-button collapsed fs-5" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                        aria-controls="collapseTwo">
+                                        Price
+
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>This is the second item's accordion body.</strong> It is hidden by
-                                        default, until the collapse plugin adds the appropriate classes that we use to
-                                        style each element. These classes control the overall appearance, as well as the
-                                        showing and hiding via CSS transitions. You can modify any of this with custom
-                                        CSS or overriding our default variables. It's also worth noting that just about
-                                        any HTML can go within the <code>.accordion-body</code>, though the transition
-                                        does limit overflow.
+                                        <input id="inputRange" type="range" class="form-range" id="customRange1">
+                                        <p id="numberPrice"></p>
+                                        <p id="numberPriceMin"></p>
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item borderStyleAccordion">
                                 <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                    <button class="accordion-button collapsed fs-5" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
                                         aria-controls="collapseThree">
-                                        Accordion Item #3
+                                        Word
+
                                     </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse"
                                     aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>This is the third item's accordion body.</strong> It is hidden by
-                                        default, until the collapse plugin adds the appropriate classes that we use to
-                                        style each element. These classes control the overall appearance, as well as the
-                                        showing and hiding via CSS transitions. You can modify any of this with custom
-                                        CSS or overriding our default variables. It's also worth noting that just about
-                                        any HTML can go within the <code>.accordion-body</code>, though the transition
-                                        does limit overflow.
+                                        <div class="input-group mb-3">
+                                            <input id="wordInput" type="text" class="form-control"
+                                                placeholder="Trova il tuo modello" aria-label="Username"
+                                                aria-describedby="basic-addon1">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!--Fine Accordion-->
                     </div>
+                    <!--Cards-->
                     <div class="col-12 col-md-9">
-                        <div class="col-sm-6 borderStyle col-md-4 col-lg-3 mt-4">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div>
-                                        <img class="w-100" src="../img/ImgJsonGloves.jpg" alt="Immagine prodotto">
-                                    </div>
-                                </div>
-                                <div class="col-6 text-black d-flex flex-column ">
-                                    <h5 class="p-2 borderStyle2 text-uppercase">Nome</h5>
-                                    <h5 class="ps-2">Category</h5>
-                                </div>
-                                <div class="col-6 d-flex justify-content-end align-items-center">
-                                    <p class="fs-5 mb-0 borderStylePrice">Price</p>
-                                </div>
-                            </div>
+                        <!--Container per lo sviluppo degli articoli-->
+                        <div class="row wrapperCard">
+
+
                         </div>
+
                     </div>
 
                 </div>
@@ -197,57 +190,59 @@
 
 
 
-
-    <!--Footer-->
-    <footer class="container-fluid h-50">
-        <div class="row vh-100 align-items-center justify-content-evenly">
-            <div class="col-md-2 col-12 footerSocialCol">
-                <div class="row">
-                    <div class="col-12 mb-4">
-                        <div class="iconFooter text-center">
-                            <a href=""> <i class="borderIcon fs-2 fa-brands fa-twitter"></i></a>
+    <!--
+        
+        <footer class="container-fluid h-50">
+            <div class="row vh-100 align-items-center justify-content-evenly">
+                <div class="col-md-2 col-12 footerSocialCol">
+                    <div class="row">
+                        <div class="col-12 mb-4">
+                            <div class="iconFooter text-center">
+                                <a href=""> <i class="borderIcon fs-2 fa-brands fa-twitter"></i></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 mb-4">
-                        <div class="iconFooter text-center">
-                            <a href=""><i class="borderIcon fs-2 fa-brands fa-linkedin-in"></i></a>
+                        <div class="col-12 mb-4">
+                            <div class="iconFooter text-center">
+                                <a href=""><i class="borderIcon fs-2 fa-brands fa-linkedin-in"></i></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 mb-4">
-                        <div class="iconFooter text-center">
-                            <a href=""><i class="borderIcon fs-2 fa-brands fa-instagram"></i></a>
+                        <div class="col-12 mb-4">
+                            <div class="iconFooter text-center">
+                                <a href=""><i class="borderIcon fs-2 fa-brands fa-instagram"></i></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="iconFooter text-center">
-                            <a href=""><i class="borderIcon fs-2 fa-brands fa-facebook"></i></a>
+                        <div class="col-12">
+                            <div class="iconFooter text-center">
+                                <a href=""><i class="borderIcon fs-2 fa-brands fa-facebook"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-2 col-12 h-25 d-flex flex-column justify-content-center footerSocialCol">
+                    <h3 class="fs-2 text-uppercase">Company</h3>
+                    <p class="fs-4">Lorem ipsum</p>
+                    <p class="fs-4">Dolor sit amet</p>
+                    <p class="fs-4">Sed odio cras</p>
+                    <p class="fs-4">Donec sed dui</p>
+                </div>
+                <div class="col-md-2 col-12 h-25 d-flex flex-column justify-content-center footerSocialCol">
+                    <h3 class="fs-2 text-uppercase">Products</h3>
+                    <p class="fs-4">Lorem ipsum</p>
+                    <p class="fs-4">Dolor sit amet</p>
+                    <p class="fs-4">Sed odio cras</p>
+                    <p class="fs-4">Donec sed dui</p>
+                </div>
+                <div class="col-md-2 col-12 h-25 d-flex flex-column justify-content-center footerSocialCol">
+                    <h3 class="fs-2 text-uppercase">Resources</h3>
+                    <p class="fs-4">Lorem ipsum</p>
+                    <p class="fs-4">Dolor sit amet</p>
+                    <p class="fs-4">Sed odio cras</p>
+                    <p class="fs-4">Donec sed dui</p>
+                </div>
             </div>
-            <div class="col-md-2 col-12 h-25 d-flex flex-column justify-content-center footerSocialCol">
-                <h3 class="fs-2 text-uppercase">Company</h3>
-                <p class="fs-4">Lorem ipsum</p>
-                <p class="fs-4">Dolor sit amet</p>
-                <p class="fs-4">Sed odio cras</p>
-                <p class="fs-4">Donec sed dui</p>
-            </div>
-            <div class="col-md-2 col-12 h-25 d-flex flex-column justify-content-center footerSocialCol">
-                <h3 class="fs-2 text-uppercase">Products</h3>
-                <p class="fs-4">Lorem ipsum</p>
-                <p class="fs-4">Dolor sit amet</p>
-                <p class="fs-4">Sed odio cras</p>
-                <p class="fs-4">Donec sed dui</p>
-            </div>
-            <div class="col-md-2 col-12 h-25 d-flex flex-column justify-content-center footerSocialCol">
-                <h3 class="fs-2 text-uppercase">Resources</h3>
-                <p class="fs-4">Lorem ipsum</p>
-                <p class="fs-4">Dolor sit amet</p>
-                <p class="fs-4">Sed odio cras</p>
-                <p class="fs-4">Donec sed dui</p>
-            </div>
-        </div>
-    </footer>
+        </footer>
+
+    -->
 
     </main>
 

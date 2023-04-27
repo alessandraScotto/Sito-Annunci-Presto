@@ -29,6 +29,7 @@ fetch('../annunci.json')
     .then(data => {
         //Data = array di annunci
 
+
         //Funzione per estrapolare le categorie e renderle visibili sull'Accordion
         let radioContainer = document.querySelector('#radioContainer');
         let wrapperCard = document.querySelector('.wrapperCard');
@@ -79,8 +80,8 @@ fetch('../annunci.json')
                                             <p class="text-uppercase fs-5 fw-semibold">${annuncio.name}</p>
                                             <p class="card-text fs-5">${annuncio.category}</p>
                                         </div>
-                                        <div class="d-flex align-items-center">
-                                            <p class="fs-5">${annuncio.price}&euro;</p>
+                                        <div class="d-flex  align-items-center">
+                                            <p class="fs-5 borderStyle p-1">${annuncio.price}&euro;</p>
                                         </div>
                                     </div>
                                 </div>
@@ -169,6 +170,9 @@ fetch('../annunci.json')
             let filtered = array.filter(el => el.name.toLowerCase().includes(wordInput.value.toLowerCase()));
             return filtered;
         }
+       
+        //Placeholder indicativo della quantità di articoli
+        wordInput.setAttribute("placeholder", `Esplora i nostri ${data.length} articoli...` )
 
         //Global filter
 
@@ -195,6 +199,9 @@ fetch('../annunci.json')
         wordInput.addEventListener('input', () => {
             globalFilter();
         })
-
+        console.log(data.length);
     })
+
+
+
 

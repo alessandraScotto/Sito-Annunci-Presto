@@ -45,6 +45,113 @@ body {
 }
 
 
+/*Preloader*/
+
+
+
+.bgContainer {
+    background-color: var(--grayDark);
+}
+
+
+.ring {
+    width: 200px;
+    height: 200px;
+    border: 0px solid #000000;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.ring:nth-child(1) {
+    border-bottom-width: 8px;
+    border-color: var(--accColor);
+    animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+
+    }
+
+}
+
+.ring:nth-child(2) {
+    border-right-width: 8px;
+    border-color: var(--middleColorBeige);
+    animation: rotate2 1.5s linear infinite;
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+
+    }
+
+}
+
+
+.ring:nth-child(3) {
+    border-top-width: 8px;
+    border-color: var(--mainColor);
+    animation: rotate3 1.5s linear infinite;
+}
+
+@keyframes rotate3 {
+    0% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+
+    }
+
+}
+
+
+
+
+
+
+
+/*Button to top*/
+#progress {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 3;
+    width: 50px;
+    height: max-content;
+    background-color: rgb(248, 249, 250);
+    border: solid 2px var(--mainColor);
+    border-radius: 50%;
+    padding: 10px;
+    color: var(--mainColor);
+    transition: 0.4s;
+
+}
+
+#progress:hover {
+    background-color: var(--mainColor);
+    color: rgb(248, 249, 250);
+    border: solid 2px var(--mainColor);
+
+}
+
+
+
+
+
+
 /*Navbar and Offcanvas element*/
 .navbar {
     background-color: var(--grayDark);
@@ -115,7 +222,7 @@ body {
 
 /*Animazione button Navbar*/
 
-div > span:nth-child(1) {
+.divSpanBtn>span:nth-child(1) {
     position: absolute;
     top: 0;
     left: 0;
@@ -137,7 +244,7 @@ div > span:nth-child(1) {
     }
 }
 
-div > span:nth-child(2) {
+.divSpanBtn>span:nth-child(2) {
     position: absolute;
     top: 0;
     right: 0;
@@ -160,7 +267,7 @@ div > span:nth-child(2) {
     }
 }
 
-div > span:nth-child(3) {
+.divSpanBtn>span:nth-child(3) {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -184,7 +291,7 @@ div > span:nth-child(3) {
     }
 }
 
-div > span:nth-child(4) {
+.divSpanBtn>span:nth-child(4) {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -365,42 +472,56 @@ img {
 
 /*Seconda sezione - Card */
 
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 300px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+
 .iconCardStyle {
     color: rgba(117, 177, 117, 0.753);
+    padding: 5px;
 }
 
 .iconCardStyle2 {
     color: rgba(243, 123, 37, 0.493);
+    padding: 5px;
 }
 
 .iconCardStyle3 {
     color: rgb(207, 175, 146);
+    padding: 5px;
 }
 
 .iconCardStyle4 {
     color: rgba(242, 222, 233, 0.861);
+    padding: 5px;
 }
 
 
 .cardStyle {
     border: double var(--colorWhite);
-    padding: 20px;
-    box-sizing: border-box;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.2);
     background: linear-gradient(rgba(0, 0, 0, 0.114), rgba(0, 0, 0, 0.164)), url(../img/BackgroundCard2.jpg);
     background-size: cover;
-    transform: scale(0.8);
-    transition: all cubic-bezier(cubic-bezier(0.215, 0.610, 0.355, 1));
-    transition-delay: 3s;
-    transition: 2.5s;
-    opacity: 0;
+
+  
 }
 
 /*Animazione card e btn*/
-.cardStyle.inPage {
-    opacity: 1;
-    transform: scale(1);
-}
+
 
 .btnStyle {
     border: double var(--colorLight);
@@ -429,10 +550,10 @@ img {
 
 /*Sezione numbers*/
 
-.numberSection{
-    background:linear-gradient(to right, rgba(0, 0, 0, 0.162), rgba(0, 0, 0, 0.221)), url(../img/Bg-Numbers.jpg);
+.numberSection {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.162), rgba(0, 0, 0, 0.221)), url(../img/Bg-Numbers.jpg);
     background-size: cover;
-    
+
 }
 
 .titleNumbers {
@@ -451,7 +572,7 @@ img {
 }
 
 
-.marginFirstCard{
+.marginFirstCard {
     margin: 15px 15px;
 
 }
@@ -460,13 +581,13 @@ img {
     margin: 45px 15px;
 }
 
-.marginThirdCard{
+.marginThirdCard {
     margin: 45px 15px;
 }
 
 .marginEndCard {
     margin: 15px 15px;
-    
+
 }
 
 .imgNumbers {
@@ -486,7 +607,7 @@ img {
     border-right: solid 2px var(--middleColorBeige);
 }
 
-.borderIcon{
+.borderIcon {
     border: solid 2px var(--mainColor);
     border-radius: 50%;
     padding: 10px;
@@ -497,12 +618,17 @@ img {
     background-color: var(--mainColor);
     color: var(--colorWhite);
     transform: rotateY(360deg);
-	animation: rotateAnimation 1s linear;
+    animation: rotateAnimation 1s linear;
 }
 
 @keyframes rotateAnimation {
-	from {transform: rotateY(45deg);}
-	to {transform: rotateY(360deg);}
+    from {
+        transform: rotateY(45deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
 }
 
 
@@ -511,18 +637,18 @@ img {
     background-color: var(--grayDark);
     height: min-content;
     z-index: 9;
-  
+
 }
 
 .borderStyle {
     border: double var(--middleColorBeige);
 }
 
-.borderStyle2{
+.borderStyle2 {
     border-bottom: solid 2px var(--middleColorBeige);
 }
 
-.borderStylePrice{
+.borderStylePrice {
     border: double var(--middleColorBeige);
 }
 
@@ -534,7 +660,7 @@ img {
     color: var(--middleColorBeige);
 }
 
-.borderStyleAccordion{
+.borderStyleAccordion {
     border: none;
     border-bottom: 2px solid var(--middleColorBeige);
 }
@@ -544,7 +670,7 @@ img {
     background-color: var(--middleColorBeige);
 }
 
-.imgCards{
+.imgCards {
     height: 300px;
     width: 200px;
 }
@@ -555,7 +681,7 @@ img {
 }
 
 .accordion-button::after {
-background-image: url(../img/chevron-down-solid.svg);
+    background-image: url(../img/chevron-down-solid.svg);
 }
 
 .form-check-input:checked {
@@ -571,4 +697,8 @@ background-image: url(../img/chevron-down-solid.svg);
 
 .accordion-button:focus {
     box-shadow: none;
+}
+
+.headerAnnunci {
+    background-image: url(../img/Background-SecondSection.jpg);
 }

@@ -1,3 +1,48 @@
+//Preload pagina
+
+let loading = document.querySelector('#loading');
+let pageContent = document.querySelector('#pageContent');
+
+setTimeout(() => {
+    //Nascondiamo il caricamento pagina
+    loading.classList.add('d-none');
+    //Mostriamo il contenuto pagina
+    pageContent.classList.remove('d-none');
+
+    //Animazione Cards - Second Section
+    let swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        autoplay: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 5,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+
+}, 2000);
+
+
+
+
+//Pulsante scroll to Top
+let progress = document.querySelector('#progress');
+
+progress.addEventListener('click', () => {
+    document.documentElement.scrollTop = 0;
+})
+
+
+
+//Navbar e Offcanvas
 
 let btnOpenNav = document.querySelector('#btnOpenNav');
 let openNav = document.querySelector('.openNav');
@@ -48,6 +93,7 @@ transformScroll()*/
 
 // Animazione immagini Header allo scroll
 let observer = new IntersectionObserver((entries) => {
+
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             imgTransition.forEach(el => {
@@ -65,8 +111,9 @@ let observer = new IntersectionObserver((entries) => {
 
 observer.observe(logoObserve);
 
-//Animazione Cards - Second Section
 
+
+/*
 //element
 let elementToWatch = document.querySelectorAll('.watch')
 //callback
@@ -85,7 +132,7 @@ let observer2 = new IntersectionObserver(callback, { threshold: 0.7 });
 elementToWatch.forEach((element) => {
     observer2.observe(element);
 });
-
+*/
 // Sezione Numbers - setInterval - observerIntersection
 let firstNumber = document.querySelector('#firstNumber');
 let secondNumber = document.querySelector('#secondNumber');
@@ -114,7 +161,7 @@ let observer3 = new IntersectionObserver((entries) => {
             createInterval(thirdNumber, 300, 20);
             createInterval(endNumber, 1850, 1);
             isChecked = true;
-        } 
+        }
     })
 });
 

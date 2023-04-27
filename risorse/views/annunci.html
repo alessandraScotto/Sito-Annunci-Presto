@@ -24,14 +24,14 @@
 
 </head>
 
-<body>
+<body class="bg-light">
 
     <nav>
         <!--Offcanvas-->
         <div id="offcanvas" class="myOffcanvas position-fixed vh-100 w-50">
             <ul class="vh-100 overflow-hidden ps-0 d-flex flex-column justify-content-center">
                 <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
-                        href="#">Home</a>
+                        href="/index.html">Home</a>
                 </li>
                 <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
                         href="#">Annunci</a>
@@ -56,7 +56,7 @@
                 <div class="d-flex align-items-end justify-content-center"><i
                         class="iconNav p-3 fa-solid fa-heart fs-4"></i>
                 </div>
-                <div class="position-relative overflow-hidden me-2 d-flex align-items-center justify-content-center">
+                <div class="divSpanBtn position-relative overflow-hidden me-2 d-flex align-items-center justify-content-center">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -76,12 +76,12 @@
     </nav>
 
     <main>
-        <!--First Section-->
-        <section class="container">
+        <!--First Section - Header -->
+        <header class="container-fluid headerAnnunci">
             <div class="row vh-100 align-content-center">
-                <div class="col-12 w-100 mb-4">
+                <div class="col-10 w-100 mb-4">
                     <h1 class="text-center display-2 fw-semibold">Proudly <strong
-                            class="strongText fst-italic fw-normal">crafted</strong> in <br> Tahiland since 1987</h1>
+                            class="strongText fst-italic fw-normal">crafted</strong> in <br> entire world since 1987</h1>
                 </div>
                 <div class="col-12 w-100">
                     <p class="text-dark text-center fs-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -91,7 +91,7 @@
                 </div>
             </div>
 
-        </section>
+        </header>
 
 
 
@@ -100,8 +100,8 @@
 
 
         <!--Section Cards Articoli-->
-        <section>
-            <div class="container-fluid">
+        <section class="mt-4">
+            <div class="container-fluid bg-light">
                 <div class="row">
                     <div class="col-12 col-md-3">
                         <!--Accordion-->
@@ -143,8 +143,10 @@
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <input id="inputRange" type="range" class="form-range" id="customRange1">
-                                        <p id="numberPrice"></p>
-                                        <p id="numberPriceMin"></p>
+                                        <div class="d-flex justify-content-between">
+                                            <p id="numberPriceMin" class="fs-5"></p>
+                                            <p id="numberPrice" class="fs-5"></p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -161,8 +163,8 @@
                                     aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <div class="input-group mb-3">
-                                            <input id="wordInput" type="text" class="form-control"
-                                                placeholder="Trova il tuo modello" aria-label="Username"
+                                            <input id="wordInput" type="text" class="form-control fs-5"
+                                                placeholder="" aria-label="Username"
                                                 aria-describedby="basic-addon1">
                                         </div>
                                     </div>

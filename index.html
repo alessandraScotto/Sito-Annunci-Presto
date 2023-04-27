@@ -18,282 +18,339 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Rajdhani:wght@300;400;500;600;700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
+
+    <!--Swiper CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <!--My style CSS-->
     <link rel="stylesheet" href="./risorse/css/style.css">
+
 
 </head>
 
 <body>
+    <!--Preload Pagina-->
+    <div id="loading"
+        class="container-fluid bgContainer d-flex justify-content-center align-items-center position-relative vh-100 w-100">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <p class="text-white fs-4">Loading</p>
+    </div>
 
 
-    <nav>
 
-        <div id="offcanvas" class="myOffcanvas position-fixed vh-100 w-50">
-            <ul class="vh-100 overflow-hidden ps-0 d-flex flex-column justify-content-center">
-                <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
-                        href="#">Home</a>
-                </li>
-                <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
-                        href="#">Annunci</a>
-                </li>
-                <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
-                        href="#">Portfolio</a>
-                </li>
-                <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2" href="#">Contact
-                        us</a>
-                </li>
 
-            </ul>
+    <!--Contenuto pagina-->
+    <div id="pageContent" class="d-none">
+        
+        
+
+        <!--Navbar e Offcanvas-->
+        <nav>
+            <!--Offcanvas-->
+            <div id="offcanvas" class="myOffcanvas position-fixed vh-100 w-50">
+                <ul class="vh-100 overflow-hidden ps-0 d-flex flex-column justify-content-center">
+                    <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
+                            href="#">Home</a>
+                    </li>
+                    <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
+                            href="./risorse/views/annunci.html" target="_blank">Annunci</a>
+                    </li>
+                    <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
+                            href="#">Portfolio</a>
+                    </li>
+                    <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
+                            href="#">Contact
+                            us</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!--Navbar-->
+            <div class="navbar d-flex flex-column end-0 vh-100 justify-content-between">
+                <a class="navbar-brand m-0 d-flex align-items-start justify-content-center" href="#"><img
+                        src="./risorse/img/Logo.png" width="70px" alt="Logo"></a>
+                <div
+                    class="divSpanBtn position-relative overflow-hidden  d-flex align-items-center justify-content-center">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <button id="btnOpenNav" class="fs-3 btn border-0 d-flex align-items-center justify-content-center"
+                        type="button">
+                        <div class="openNav d-flex justify-content-center align-items-center p-1">
+                            <i class="fs-2 fa-solid fa-bars-staggered"></i>
+                        </div>
+                    </button>
+                </div>
+                <div class="d-flex align-items-end justify-content-center"><i
+                        class="iconNav fa-solid fa-heart fs-2"></i>
+                </div>
+            </div>
+
+        </nav>
+
+
+
+        <!--Scroll to top-->
+        <div id="progress" class="d-flex justify-content-center align-items-center">
+            <span id="progress-value"><i class="progressColor fs-4 fa-solid fa-angles-up"></i></span>
         </div>
 
 
-
-
-        <div class="navbar d-flex flex-column end-0 vh-100 justify-content-between">
-            <a class="navbar-brand m-0 d-flex align-items-start justify-content-center" href="#"><img
-                    src="./risorse/img/Logo.png" width="70px" alt="Logo"></a>
-            <div class="position-relative overflow-hidden  d-flex align-items-center justify-content-center">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <button id="btnOpenNav" class="fs-3 btn border-0 d-flex align-items-center justify-content-center"
-                    type="button">
-                    <div class="openNav d-flex justify-content-center align-items-center p-1">
-                        <i class="fs-2 fa-solid fa-bars-staggered"></i>
+        <!--Header-->
+        <header class="main min-vh-100">
+            <section class="py-0 overflow-hidden bg-white position-relative d-block">
+                <div class="container-fluid position-relative w-100 ms-auto me-auto d-block">
+                    <div class="devices-wrapper bg-transparent d-block">
+                        <div class="headerBici imgTransition imgTransitionBike d-block">
+                            <img class="device" src="./risorse/img/Header1.jpg" alt="">
+                        </div>
+                        <div class="headerCoffe imgTransition imgTransitionCoffe d-block">
+                            <img class="device" src="./risorse/img/Header2.jpg" alt="">
+                        </div>
+                        <div class="headerBook imgTransition imgTransitionBook d-block">
+                            <img class="device" src="./risorse/img/Header3.jpg" alt="">
+                        </div>
+                        <div class="headerRose imgTransition imgTransitionRose d-block">
+                            <img class="device" src="./risorse/img/Header4.jpg" alt="">
+                        </div>
+                        <div class="headerApple imgTransition imgTransitionApple d-block">
+                            <img class="device" src="./risorse/img/Header5.jpg" alt="">
+                        </div>
                     </div>
-                </button>
-            </div>
-            <div class="d-flex align-items-end justify-content-center"><i class="iconNav fa-solid fa-heart fs-2"></i>
-            </div>
-        </div>
-
-    </nav>
 
 
-    <header class="main min-vh-100">
-        <section class="py-0 overflow-hidden bg-white position-relative d-block">
-            <div class="container-fluid position-relative w-100 ms-auto me-auto d-block">
-                <div class="devices-wrapper bg-transparent d-block">
-                    <div class="headerBici imgTransition imgTransitionBike d-block">
-                        <img class="device" src="./risorse/img/Header1.jpg" alt="">
-                    </div>
-                    <div class="headerCoffe imgTransition imgTransitionCoffe d-block">
-                        <img class="device" src="./risorse/img/Header2.jpg" alt="">
-                    </div>
-                    <div class="headerBook imgTransition imgTransitionBook d-block">
-                        <img class="device" src="./risorse/img/Header3.jpg" alt="">
-                    </div>
-                    <div class="headerRose imgTransition imgTransitionRose d-block">
-                        <img class="device" src="./risorse/img/Header4.jpg" alt="">
-                    </div>
-                    <div class="headerApple imgTransition imgTransitionApple d-block">
-                        <img class="device" src="./risorse/img/Header5.jpg" alt="">
-                    </div>
-                </div>
+                    <div class="row headerIndex py-8 min-vh-100 align-items-center">
+                        <div class="paddignH1 col-md-auto">
+                            <h1 class="logoObserve display-1 greyLight fs-sm-4 fs-md-5 fw-bold"> Look like and<strong
+                                    class="fst-italic fw-light">
+                                    expert </strong> <br>
+                                right from the start</h1>
+                            <p class="fs-1 mt-3 greyDark">Head start your stylish website with a gorgeous template </p>
+                        </div>
 
-
-                <div class="row headerIndex py-8 min-vh-100 align-items-center">
-                    <div class="paddignH1 col-md-auto">
-                        <h1 class="logoObserve display-1 greyLight fs-sm-4 fs-md-5 fw-bold"> Look like and<strong
-                                class="fst-italic fw-light">
-                                expert </strong> <br>
-                            right from the start</h1>
-                        <p class="fs-1 mt-3 greyDark">Head start your stylish website with a gorgeous template </p>
                     </div>
 
                 </div>
+            </section>
+        </header>
 
-            </div>
-        </section>
-    </header>
-
-    <main>
-        <!--Prima Sezione-->
-        <section class="container-fluid">
-            <div class="row justify-content-evenly backgroundCarousel">
-                <div class="col-5 d-flex flex-column align-items-center justify-content-center position-relative">
-                    <h3 class="text-uppercase greyLight h3BorderFirst">Sell Anything</h3>
-                    <h2 class="my-5 fw-bold display-1 text-center greyDark">All you need to power your online store</h2>
-                    <p class="greyLight fs-2 h3Border">Our powerful platform helps your business grow.</p>
-                </div>
-                <!--Carousel Section-->
-                <div class="col-md-5 col-12 position-relative">
-                    <div id="carouselExampleIndicators" class="carousel slide p-3" data-bs-ride="true">
-                        <div class="carousel-indicators pb-4">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner rounded-4 borderCarousel">
-                            <div class="carousel-item active">
-                                <img src="./risorse/img/Img1.jpg" class="rounded-4 d-block w-100 vh-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="./risorse/img/Img2.jpg" class="rounded-4 d-block w-100 vh-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="./risorse/img/Img3.jpg" class="rounded-4 d-block w-100 vh-100" alt="...">
-                            </div>
-                        </div>
+        <main>
+            <!--Prima Sezione-->
+            <section class="container-fluid">
+                <div class="row justify-content-evenly backgroundCarousel">
+                    <div class="col-5 d-flex flex-column align-items-center justify-content-center position-relative">
+                        <h3 class="text-uppercase greyLight h3BorderFirst">Sell Anything</h3>
+                        <h2 class="my-5 fw-bold display-1 text-center greyDark">All you need to power your online store
+                        </h2>
+                        <p class="greyLight fs-2 h3Border">Our powerful platform helps your business grow.</p>
                     </div>
-                </div>
-            </div>
-        </section>
-        <!--Seconda Sezione-->
-        <section class="bg-light vh-100">
-            <div class="row">
-                <div class="col-12 text-center pt-5 mb-4">
-                    <h2 class="fs-1 mb-5 fw-semibold">Our Features</h2>
-                    <p class="fs-3 observerCard mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero,
-                        omnis. <br> Nihil
-                        magnam sed
-                        repudiandae reprehenderit doloribus molestias adipisci.</p>
-                </div>
-                <!--Cards-->
-                <div class="row justify-content-around align-items-center mt-5">
-                    <div class="col-md-2 col-12">
-                        <div class="card cardStyle watch" style="width: 18rem;">
-                            <div class="display-5 text-center iconCardStyle">
-                                <i class="fa-brands fa-pagelines"></i>
+                    <!--Carousel Section-->
+                    <div class="col-md-5 col-12 position-relative">
+                        <div id="carouselExampleIndicators" class="carousel slide p-3" data-bs-ride="true">
+                            <div class="carousel-indicators pb-4">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
                             </div>
-
-                            <div class="card-body text-center">
-                                <h5 class="card-title fs-4">Natural Process</h5>
-
-                                <p class="card-text fs-5">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum
-                                    diam
-                                    justo sed vero dolor duo.
-                                </p>
-                                <hr class="text-white">
-                                <a href="#"><button class="btn btnStyle fw-semibold fs-5">Go somewhere</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-12">
-                        <div class="card cardStyle watch" style="width: 18rem;">
-                            <div class="display-5 text-center iconCardStyle2">
-                                <i class="fa-brands fa-canadian-maple-leaf"></i>
-                            </div>
-
-                            <div class="card-body text-center">
-                                <h5 class="card-title fs-4">Organic Products</h5>
-                                <p class="card-text fs-5">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum
-                                    diam
-                                    justo sed vero dolor duo.
-                                </p>
-                                <hr class="text-white">
-                                <a href="#"><button class="btn btnStyle fw-semibold fs-5">Go somewhere</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-12">
-                        <div class="card cardStyle watch" style="width: 18rem;">
-                            <div class="display-5 text-center iconCardStyle3">
-                                <i class="fa-solid fa-paw"></i>
-                            </div>
-
-                            <div class="card-body text-center">
-                                <h5 class="card-title fs-4">Animals Safe</h5>
-                                <p class="card-text fs-5">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum
-                                    diam
-                                    justo sed vero dolor duo.
-                                </p>
-                                <hr class="text-white">
-                                <a href="#"><button class="btn btnStyle fw-semibold fs-5">Go somewhere</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-12">
-                        <div class="card cardStyle watch" style="width: 18rem;">
-                            <div class="display-5 text-center iconCardStyle4">
-                                <i class="fa-solid fa-biohazard"></i>
-                            </div>
-
-                            <div class="card-body text-center">
-                                <h5 class="card-title fs-4">Biologically Safe</h5>
-                                <p class="card-text fs-5">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum
-                                    diam
-                                    justo sed vero dolor duo.
-                                </p>
-                                <hr class="text-white">
-                                <a href="#"><button class="btn btnStyle fw-semibold fs-5">Go somewhere</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Terza sezione - Video -->
-        <section class="container-fluid p-0 position-relative d-flex">
-            <video class="bgVideo" src="./risorse/img/Foglia.mp4" autoplay muted loop></video>
-            <div
-                class="textVideo px-5 position-absolute start-0 top-0 w-100 vh-100 d-flex flex-column justify-content-center align-items-center">
-                <h2 class="text-center text-white display-5">"Don't be into trends. <br> Don't make fashion own
-                    you,<strong class="fst-italic"> but
-                        you
-                        decide what you are </strong>, <br> what you want to express by the way you dress and the way to
-                    live."</h2>
-                <p class="text-center text-white display-5"> —Gianni Versace</p>
-            </div>
-        </section>
-
-        <!--Quarta sezione - Numbers-->
-        <section class="container-fluid vh-100 pt-5 numberSection">
-            <div class="row vh-100 justify-content-evenly">
-                <div class="col-6 text-white">
-                    <div class="row justify-content-evenly">
-                        <div class="col-12 mb-4">
-                            <p class="display-5 titleNumbers">Some numbers</p>
-                        </div>
-                        <div class="col-5">
-                            <div class="row">
-                                <div class="col-12 styleNumbers marginFirstCard text-center">
-                                    <div>
-                                        <h3 id="firstNumber" class="fs-1"></h3>
-                                        <p class="fs-2">Our number</p>
-                                    </div>
+                            <div class="carousel-inner rounded-4 borderCarousel">
+                                <div class="carousel-item active">
+                                    <img src="./risorse/img/Img1.jpg" class="rounded-4 d-block w-100 vh-100" alt="...">
                                 </div>
-                                <div class="col-12 styleNumbers marginSecondCard text-center">
-                                    <div>
-                                        <h3 id="secondNumber" class="fs-1"></h3>
-                                        <p class="fs-2">Our number</p>
-                                    </div>
+                                <div class="carousel-item">
+                                    <img src="./risorse/img/Img2.jpg" class="rounded-4 d-block w-100 vh-100" alt="...">
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-5">
-                            <div class="row">
-                                <div class="col-12 styleNumbers marginThirdCard text-center">
-                                    <div>
-                                        <h3 id="thirdNumber" class="fs-1"></h3>
-                                        <p class="fs-2">Our number</p>
-                                    </div>
-                                </div>
-                                <div class="col-12 styleNumbers marginEndCard text-center">
-                                    <div>
-                                        <h3 id="endNumber" class="fs-1"></h3>
-                                        <p class="fs-2">Our number</p>
-                                    </div>
+                                <div class="carousel-item">
+                                    <img src="./risorse/img/Img3.jpg" class="rounded-4 d-block w-100 vh-100" alt="...">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-5 d-flex justify-content-center align-items-center">
-                    <div>
-                        <img class="imgNumbers" src="./risorse/img/modelNumber.jpg" alt="model">
+            </section>
+            <!--Seconda Sezione-->
+            <section class="bg-light container-fluid vh-100">
+                <div class="row">
+                    <div class="col-12 text-center pt-5 mb-4">
+                        <h2 class="fs-1 mb-5 fw-semibold">Our Features</h2>
+                        <p class="fs-3 observerCard mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Vero,
+                            omnis. <br> Nihil
+                            magnam sed
+                            repudiandae reprehenderit doloribus molestias adipisci.</p>
+                    </div>
+                    <!--Cards-->
+                    <div class="row justify-content-around align-items-center mt-5">
+
+                        <div class="col-12 vh-100">
+                            <!-- Swiper -->
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="card cardStyle watch">
+                                            <div class="display-5 text-center iconCardStyle">
+                                                <i class="fa-brands fa-pagelines"></i>
+                                            </div>
+
+                                            <div class="card-body text-center">
+                                                <h5 class="card-title fs-4">Natural Process</h5>
+
+                                                <p class="card-text fs-5">Tempor ut dolore lorem kasd vero ipsum sit
+                                                    eirmod sit.
+                                                    Ipsum
+                                                    diam
+                                                    justo sed vero dolor duo.
+                                                </p>
+                                                <hr class="text-white">
+                                                <a href="#"><button class="btn btnStyle fw-semibold fs-5">Go
+                                                        somewhere</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card cardStyle watch">
+                                            <div class="display-5 text-center iconCardStyle2">
+                                                <i class="fa-brands fa-canadian-maple-leaf"></i>
+                                            </div>
+
+                                            <div class="card-body text-center">
+                                                <h5 class="card-title fs-4">Organic Products</h5>
+                                                <p class="card-text fs-5">Tempor ut dolore lorem kasd vero ipsum sit
+                                                    eirmod sit.
+                                                    Ipsum
+                                                    diam
+                                                    justo sed vero dolor duo.
+                                                </p>
+                                                <hr class="text-white">
+                                                <a href="#"><button class="btn btnStyle fw-semibold fs-5">Go
+                                                        somewhere</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card cardStyle watch">
+                                            <div class="display-5 text-center iconCardStyle3">
+                                                <i class="fa-solid fa-paw"></i>
+                                            </div>
+
+                                            <div class="card-body text-center">
+                                                <h5 class="card-title fs-4">Animals Safe</h5>
+                                                <p class="card-text fs-5">Tempor ut dolore lorem kasd vero ipsum sit
+                                                    eirmod sit.
+                                                    Ipsum
+                                                    diam
+                                                    justo sed vero dolor duo.
+                                                </p>
+                                                <hr class="text-white">
+                                                <a href="#"><button class="btn btnStyle fw-semibold fs-5">Go
+                                                        somewhere</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card cardStyle watch">
+                                            <div class="display-5 text-center iconCardStyle4">
+                                                <i class="fa-solid fa-biohazard"></i>
+                                            </div>
+
+                                            <div class="card-body text-center">
+                                                <h5 class="card-title fs-4">Biologically Safe</h5>
+                                                <p class="card-text fs-5">Tempor ut dolore lorem kasd vero ipsum sit
+                                                    eirmod sit.
+                                                    Ipsum
+                                                    diam
+                                                    justo sed vero dolor duo.
+                                                </p>
+                                                <hr class="text-white">
+                                                <a href="#"><button class="btn btnStyle fw-semibold fs-5">Go
+                                                        somewhere</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            <!--Terza sezione - Video -->
+            <section class="container-fluid p-0 position-relative d-flex">
+                <video class="bgVideo" src="./risorse/img/Foglia.mp4" autoplay muted loop></video>
+                <div
+                    class="textVideo px-5 position-absolute start-0 top-0 w-100 vh-100 d-flex flex-column justify-content-center align-items-center">
+                    <h2 class="text-center text-white display-5">"Don't be into trends. <br> Don't make fashion own
+                        you,<strong class="fst-italic"> but
+                            you
+                            decide what you are </strong>, <br> what you want to express by the way you dress and the
+                        way to
+                        live."</h2>
+                    <p class="text-center text-white display-5"> —Gianni Versace</p>
+                </div>
+            </section>
+
+            <!--Quarta sezione - Numbers-->
+            <section class="container-fluid vh-100 pt-5 numberSection">
+                <div class="row vh-100 justify-content-evenly">
+                    <div class="col-6 text-white">
+                        <div class="row justify-content-evenly">
+                            <div class="col-12 mb-4">
+                                <p class="display-5 titleNumbers">Some numbers</p>
+                            </div>
+                            <div class="col-5">
+                                <div class="row">
+                                    <div class="col-12 styleNumbers marginFirstCard text-center">
+                                        <div>
+                                            <h3 id="firstNumber" class="fs-1"></h3>
+                                            <p class="fs-2">Our number</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 styleNumbers marginSecondCard text-center">
+                                        <div>
+                                            <h3 id="secondNumber" class="fs-1"></h3>
+                                            <p class="fs-2">Our number</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="row">
+                                    <div class="col-12 styleNumbers marginThirdCard text-center">
+                                        <div>
+                                            <h3 id="thirdNumber" class="fs-1"></h3>
+                                            <p class="fs-2">Our number</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 styleNumbers marginEndCard text-center">
+                                        <div>
+                                            <h3 id="endNumber" class="fs-1"></h3>
+                                            <p class="fs-2">Our number</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5 d-flex justify-content-center align-items-center">
+                        <div>
+                            <img class="imgNumbers" src="./risorse/img/modelNumber.jpg" alt="model">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
         <!--Footer-->
         <footer class="container-fluid h-50">
             <div class="row vh-100 align-items-center justify-content-evenly">
@@ -344,9 +401,7 @@
                 </div>
             </div>
         </footer>
-
-    </main>
-
+    </div>
 
 
 
@@ -354,11 +409,17 @@
 
 
 
-
+    <!--Bootstrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!--My script JS-->
     <script src="./risorse/js/main.js"></script>
+
+
 </body>
 
 </html>

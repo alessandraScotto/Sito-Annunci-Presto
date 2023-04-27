@@ -472,6 +472,10 @@ img {
 
 /*Seconda sezione - Card */
 
+.borderOurFeatures {
+    color: rgba(26, 93, 26, 0.584);
+}
+
 .swiper {
     width: 100%;
     padding-top: 50px;
@@ -490,34 +494,36 @@ img {
     width: 100%;
 }
 
+.swiper-pagination-bullets {
+    display: none;
+}
 
 .iconCardStyle {
-    color: rgba(117, 177, 117, 0.753);
+    color: rgba(117, 177, 117, 0.858);
     padding: 5px;
 }
 
 .iconCardStyle2 {
-    color: rgba(243, 123, 37, 0.493);
+    color: rgba(243, 123, 37, 0.664);
     padding: 5px;
 }
 
 .iconCardStyle3 {
-    color: rgb(207, 175, 146);
+    color: rgb(207, 176, 146);
     padding: 5px;
 }
 
 .iconCardStyle4 {
-    color: rgba(242, 222, 233, 0.861);
+    color: rgba(242, 222, 233, 0.963);
     padding: 5px;
 }
 
 
 .cardStyle {
-    border: double var(--colorWhite);
-    background: linear-gradient(rgba(0, 0, 0, 0.114), rgba(0, 0, 0, 0.164)), url(../img/BackgroundCard2.jpg);
+   
+    background:linear-gradient(rgba(255, 255, 255, 0.215),rgba(255, 255, 255, 0.114)), url(../img/bgCard2.jpg);
     background-size: cover;
-
-  
+    
 }
 
 /*Animazione card e btn*/
@@ -530,7 +536,7 @@ img {
 
 .btnStyle:hover {
     background-color: var(--colorWhite);
-    color: var(--grayDark);
+    color:  rgba(26, 93, 26, 0.584);
 }
 
 /*Terza sezione - Video*/
@@ -669,6 +675,8 @@ img {
     color: var(--colorWhite);
     background-color: var(--middleColorBeige);
 }
+
+
 
 .imgCards {
     height: 300px;

@@ -48,7 +48,7 @@
         <!--Navbar e Offcanvas-->
         <nav>
             <!--Offcanvas-->
-            
+
             <div id="offcanvas" class="myOffcanvas position-fixed vh-100 w-50">
                 <ul class="vh-100 overflow-hidden ps-0 d-flex flex-column justify-content-center">
                     <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
@@ -67,8 +67,10 @@
 
                 </ul>
             </div>
+
             <!--Navbar-->
-            <div class="navbar d-flex flex-column end-0 vh-100 justify-content-between">
+
+            <div class="navbar d-none d-md-flex flex-column end-0 vh-100 justify-content-between">
                 <a class="navbar-brand m-0 d-flex align-items-start justify-content-center" href="#"><img
                         src="./risorse/img/Logo.png" width="70px" alt="Logo"></a>
                 <div
@@ -87,6 +89,33 @@
                 <div class="d-flex align-items-end justify-content-center"><i
                         class="iconNav fa-solid fa-heart fs-2"></i>
                 </div>
+            </div>
+
+            <!--Navbar small-->
+            <div class="navbarAnnunci d-md-none d-flex position-fixed w-100  justify-content-between">
+                <a class="navbar-brand m-0 d-flex align-items-center" href="#"><img src="../img/Logo.png" width="70px"
+                        alt="Logo"></a>
+
+                <div class="d-flex">
+                    <div class="d-flex align-items-end justify-content-center"><i
+                            class="iconNav p-3 fa-solid fa-heart fs-4"></i>
+                    </div>
+                    <div
+                        class="divSpanBtn position-relative overflow-hidden me-2 d-flex align-items-center justify-content-center">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <button id="btnOpenNav"
+                            class="fs-3 btn border-0 d-flex align-items-center justify-content-center" type="button">
+                            <div class="openNav d-flex justify-content-center align-items-center p-1">
+                                <i class="fs-3 fa-solid fa-bars-staggered"></i>
+                            </div>
+                        </button>
+                    </div>
+
+                </div>
+
             </div>
 
         </nav>
@@ -143,12 +172,12 @@
             <section class="container-fluid">
                 <div class="row justify-content-evenly backgroundCarousel">
                     <div
-                        class="col-md-5 col-12 d-flex flex-column align-items-center justify-content-center position-relative">
+                        class="col-md-5 pt-md-0 pt-5 col-12 d-flex flex-column align-items-center justify-content-center position-relative">
                         <h3 class="text-uppercase greyLight h3BorderFirst">Sell Anything</h3>
                         <h2 class="my-5 fw-bold display-1 text-center greyDark">All you need to power your
                             online store
                         </h2>
-                        <p class="greyLight fs-2 h3Border">Our powerful platform helps your business grow.
+                        <p class="greyLight text-center fs-2 h3Border">Our powerful platform helps your business grow.
                         </p>
                     </div>
                     <!--Carousel Section-->
@@ -178,10 +207,12 @@
                 </div>
             </section>
             <!--Seconda Sezione-->
-            <section class="bg-light container-fluid vh-100">
-                <div class="row">
+            <section class="bg-light container-fluid vh-100 ">
+                <div class="row ">
                     <div class="col-12 text-center pt-5 mb-4">
-                        <h2 class="fs-1 mb-5 fw-semibold">Our Features</h2>
+
+                        <h2 class="fs-3 mb-5 fw-semibold text-uppercase borderOurFeatures"><span><i class="fa-solid fa-leaf fa-flip-horizontal"></i></span> Our Features <span><i class="fa-solid fa-leaf"></i></span> </h2>
+
                         <p class="fs-3 observerCard mb-4">Lorem ipsum dolor, sit amet consectetur
                             adipisicing elit.
                             Vero,
@@ -194,7 +225,7 @@
 
                         <div class="col-12 vh-100">
                             <!-- Swiper -->
-                            <div class="swiper mySwiper">
+                            <div class="swiper mySwiper p-0">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="card cardStyle watch">
@@ -202,7 +233,7 @@
                                                 <i class="fa-brands fa-pagelines"></i>
                                             </div>
 
-                                            <div class="card-body text-center">
+                                            <div class="card-body text-center text-white">
                                                 <h5 class="card-title fs-4">Natural Process</h5>
 
                                                 <p class="card-text fs-5">Tempor ut dolore lorem kasd vero
@@ -225,7 +256,7 @@
                                                 <i class="fa-brands fa-canadian-maple-leaf"></i>
                                             </div>
 
-                                            <div class="card-body text-center">
+                                            <div class="card-body text-center text-white">
                                                 <h5 class="card-title fs-4">Organic Products</h5>
                                                 <p class="card-text fs-5">Tempor ut dolore lorem kasd vero
                                                     ipsum sit
@@ -241,35 +272,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="card cardStyle watch">
-                                            <div class="display-5 text-center iconCardStyle3">
-                                                <i class="fa-solid fa-paw"></i>
-                                            </div>
-
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title fs-4">Animals Safe</h5>
-                                                <p class="card-text fs-5">Tempor ut dolore lorem kasd vero
-                                                    ipsum sit
-                                                    eirmod sit.
-                                                    Ipsum
-                                                    diam
-                                                    justo sed vero dolor duo.
-                                                </p>
-                                                <hr class="text-white">
-                                                <a href="#"><button class="btn btnStyle fw-semibold fs-5">Go
-                                                        somewhere</button>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                  
                                     <div class="swiper-slide">
                                         <div class="card cardStyle watch">
                                             <div class="display-5 text-center iconCardStyle4">
                                                 <i class="fa-solid fa-biohazard"></i>
                                             </div>
 
-                                            <div class="card-body text-center">
+                                            <div class="card-body text-center text-white">
                                                 <h5 class="card-title fs-4">Biologically Safe</h5>
                                                 <p class="card-text fs-5">Tempor ut dolore lorem kasd vero
                                                     ipsum sit
@@ -311,15 +321,15 @@
             </section>
 
             <!--Quarta sezione - Numbers-->
-            <section class="container-fluid vh-100 pt-5 numberSection">
-                <div class="row vh-100 justify-content-evenly">
+            <section class="container-fluid pt-5 pb-5 numberSection">
+                <div class="row justify-content-evenly">
                     <div class="col-md-6 col-12 text-white">
                         <div class="row justify-content-evenly">
                             <div class="col-12 mb-4">
                                 <p class="display-5 titleNumbers">Some numbers</p>
                             </div>
-                            <div class="col-5">
-                                <div class="row">
+                            <div class="col-md-5 col-10">
+                                <div class="row justify-content-center">
                                     <div class="col-12 styleNumbers marginFirstCard text-center">
                                         <div>
                                             <h3 id="firstNumber" class="fs-1"></h3>
@@ -334,8 +344,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-5">
-                                <div class="row">
+                            <div class="col-md-5 col-10">
+                                <div class="row justify-content-center">
                                     <div class="col-12 styleNumbers marginThirdCard text-center">
                                         <div>
                                             <h3 id="thirdNumber" class="fs-1"></h3>
@@ -390,21 +400,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2 col-12 h-25 d-flex flex-column justify-content-center footerSocialCol">
+                <div
+                    class="col-md-2 col-12 d-flex text-md-start text-center flex-column justify-content-center footerSocialCol">
                     <h3 class="fs-2 text-uppercase">Company</h3>
                     <p class="fs-4">Lorem ipsum</p>
                     <p class="fs-4">Dolor sit amet</p>
                     <p class="fs-4">Sed odio cras</p>
                     <p class="fs-4">Donec sed dui</p>
                 </div>
-                <div class="col-md-2 col-12 h-25 d-flex flex-column justify-content-center footerSocialCol">
+                <div
+                    class="col-md-2 col-12 d-flex text-md-start text-center flex-column justify-content-center footerSocialCol">
                     <h3 class="fs-2 text-uppercase">Products</h3>
                     <p class="fs-4">Lorem ipsum</p>
                     <p class="fs-4">Dolor sit amet</p>
                     <p class="fs-4">Sed odio cras</p>
                     <p class="fs-4">Donec sed dui</p>
                 </div>
-                <div class="col-md-2 col-12 h-25 d-flex flex-column justify-content-center footerSocialCol">
+                <div
+                    class="col-md-2 col-12 text-md-start text-center d-flex flex-column justify-content-center footerSocialCol">
                     <h3 class="fs-2 text-uppercase">Resources</h3>
                     <p class="fs-4">Lorem ipsum</p>
                     <p class="fs-4">Dolor sit amet</p>

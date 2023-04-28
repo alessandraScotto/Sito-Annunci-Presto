@@ -663,7 +663,7 @@ img {
 }
 
 .strongText {
-    color: var(--middleColorBeige);
+    color: var(--secColor);
 }
 
 .borderStyleAccordion {
@@ -710,3 +710,27 @@ img {
 .headerAnnunci {
     background-image: url(../img/Background-SecondSection.jpg);
 }
+
+/*
+ Button clear filter
+*/
+
+.btnClearFilter {
+    border: double var(--middleColorBeige);
+    color: var(--middleColorBeige);
+}
+
+.btnClearFilter:hover {
+    background-color: var(--middleColorBeige);
+    border: double var(--middleColorBeige);
+    color: white;
+}
+
+.iconClear {
+    color: var(--accColor);
+}
+
+.iconClear:hover {
+    color: white;
+}
+

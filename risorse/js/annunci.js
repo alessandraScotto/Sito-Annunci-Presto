@@ -1,3 +1,17 @@
+//Preload pagina
+
+let loading = document.querySelector('#loading');
+let pageContent = document.querySelector('#pageContent');
+
+setTimeout(() => {
+    //Nascondiamo il caricamento pagina
+    loading.classList.add('d-none');
+    //Mostriamo il contenuto pagina
+    pageContent.classList.remove('d-none');
+
+}, 2000);
+
+
 let btnOpenNav = document.querySelector('#btnOpenNav');
 let openNav = document.querySelector('.openNav');
 let offcanvas = document.querySelector('#offcanvas');
@@ -170,9 +184,9 @@ fetch('../annunci.json')
             let filtered = array.filter(el => el.name.toLowerCase().includes(wordInput.value.toLowerCase()));
             return filtered;
         }
-       
+
         //Placeholder indicativo della quantità di articoli
-        wordInput.setAttribute("placeholder", `Esplora i nostri ${data.length} articoli...` )
+        wordInput.setAttribute("placeholder", `Esplora i nostri ${data.length} articoli...`)
 
         //Global filter
 
@@ -200,6 +214,25 @@ fetch('../annunci.json')
             globalFilter();
         })
         console.log(data.length);
+
+        //Button clear filter
+        let clearFilter = document.querySelector('#clearFilter');
+
+        clearFilter.addEventListener('click', () => {
+            //Reset di tutti i campi dei filtri
+            radioCategories[0].checked = true;
+            setPrice();
+            wordInput.value = '';
+
+            //Ricreare le card dopo il reset
+            globalFilter();
+        })
+
+
+
+
+
+
     })
 
 

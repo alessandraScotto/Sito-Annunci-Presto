@@ -26,234 +26,254 @@
 
 <body class="bg-light">
 
-    <nav>
-        <!--Offcanvas-->
-        <div id="offcanvas" class="myOffcanvas position-fixed vh-100 w-50">
-            <ul class="vh-100 overflow-hidden ps-0 d-flex flex-column justify-content-center">
-                <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
-                        href="/index.html">Home</a>
-                </li>
-                <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
-                        href="#">Annunci</a>
-                </li>
-                <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
-                        href="#">Portfolio</a>
-                </li>
-                <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2" href="#">Contact
-                        us</a>
-                </li>
-
-            </ul>
-        </div>
+    <!--Preload Pagina-->
+    <div id="loading"
+        class="container-fluid bgContainer d-flex justify-content-center align-items-center position-relative vh-100 w-100">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <p class="text-white fs-4">Loading</p>
+    </div>
 
 
-        <!--Navbar-->
-        <div class="navbarAnnunci position-fixed w-100 d-flex justify-content-between">
-            <a class="navbar-brand m-0 d-flex align-items-center" href="#"><img src="../img/Logo.png" width="70px"
-                    alt="Logo"></a>
+    <!--Contenuto pagina-->
+    <div id="pageContent" class="d-none">
 
-            <div class="d-flex">
-                <div class="d-flex align-items-end justify-content-center"><i
-                        class="iconNav p-3 fa-solid fa-heart fs-4"></i>
+        <nav>
+            <!--Offcanvas-->
+            <div id="offcanvas" class="myOffcanvas position-fixed vh-100 w-50">
+                <ul class="vh-100 overflow-hidden ps-0 d-flex flex-column justify-content-center">
+                    <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
+                            href="/index.html">Home</a>
+                    </li>
+                    <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
+                            href="#">Annunci</a>
+                    </li>
+                    <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
+                            href="#">Portfolio</a>
+                    </li>
+                    <li class="list-group-item p-4"><a class="liStyle text-decoration-none text-white fs-2"
+                            href="#">Contact
+                            us</a>
+                    </li>
+
+                </ul>
+            </div>
+
+
+            <!--Navbar-->
+            <div class="navbarAnnunci position-fixed w-100 d-flex justify-content-between">
+                <a class="navbar-brand m-0 d-flex align-items-center" href="#"><img src="../img/Logo.png" width="70px"
+                        alt="Logo"></a>
+
+                <div class="d-flex">
+                    <div class="d-flex align-items-end justify-content-center"><i
+                            class="iconNav p-3 fa-solid fa-heart fs-4"></i>
+                    </div>
+                    <div
+                        class="divSpanBtn position-relative overflow-hidden me-2 d-flex align-items-center justify-content-center">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <button id="btnOpenNav"
+                            class="fs-3 btn border-0 d-flex align-items-center justify-content-center" type="button">
+                            <div class="openNav d-flex justify-content-center align-items-center p-1">
+                                <i class="fs-3 fa-solid fa-bars-staggered"></i>
+                            </div>
+                        </button>
+                    </div>
+
                 </div>
-                <div class="divSpanBtn position-relative overflow-hidden me-2 d-flex align-items-center justify-content-center">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <button id="btnOpenNav" class="fs-3 btn border-0 d-flex align-items-center justify-content-center"
-                        type="button">
-                        <div class="openNav d-flex justify-content-center align-items-center p-1">
-                            <i class="fs-3 fa-solid fa-bars-staggered"></i>
+
+            </div>
+
+        </nav>
+
+        <main>
+            <!--First Section - Header -->
+            <header class="container-fluid headerAnnunci">
+                <div class="row vh-100 align-content-center">
+                    <div class="col-10 w-100 mb-4">
+                        <h1 class="text-center display-2 fw-semibold">Proudly <strong
+                                class="strongText fst-italic fw-normal">crafted</strong> in <br> entire world since 1987
+                        </h1>
+                    </div>
+                    <div class="col-12 w-100">
+                        <p class="text-dark text-center fs-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Velit saepe quisquam atque voluptatem
+                            ipsam tenetur, excepturi repellat distinctio est quam inventore quae doloribus aliquid
+                            rerum,
+                            magni quos sequi. Delectus, cum.</p>
+                    </div>
+                </div>
+
+            </header>
+
+
+
+
+
+
+
+            <!--Section Cards Articoli-->
+            <section class="mt-4">
+                <div class="container-fluid bg-light">
+                    <div class="row">
+                        <div class="col-12 col-md-3">
+                            <!--Accordion-->
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item borderStyleAccordion">
+                                    <h2 class="accordion-header " id="headingOne">
+                                        <button id="styleBtn" class="accordion-button position-relative fs-5"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                            aria-expanded="true" aria-controls="collapseOne">
+                                            All categories
+
+                                        </button>
+
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div id="radioContainer" class="accordion-body">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="categories" id="All"
+                                                    checked>
+                                                <label class="form-check-label" for="All">
+                                                    All categories
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item borderStyleAccordion">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed fs-5" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Price
+
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <input id="inputRange" type="range" class="form-range" id="customRange1">
+                                            <div class="d-flex justify-content-between">
+                                                <p id="numberPriceMin" class="fs-5"></p>
+                                                <p id="numberPrice" class="fs-5"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item borderStyleAccordion">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed fs-5" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            Word
+
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="input-group mb-3">
+                                                <input id="wordInput" type="text" class="form-control fs-5"
+                                                    placeholder="" aria-label="Username"
+                                                    aria-describedby="basic-addon1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <button id="clearFilter" class="btn btnClearFilter fs-5 mt-3 fw-semibold"><span class="iconClear"><i
+                                                class="fa-solid fa-broom iconClear fs-4 me-2"></i></span>Clear filter</button>
+                                </div>
+                            </div>
+                            <!--Fine Accordion-->
                         </div>
-                    </button>
+                        <!--Cards-->
+                        <div class="col-12 col-md-9">
+                            <!--Container per lo sviluppo degli articoli-->
+                            <div class="row wrapperCard">
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
-
-            </div>
-
-        </div>
-
-    </nav>
-
-    <main>
-        <!--First Section - Header -->
-        <header class="container-fluid headerAnnunci">
-            <div class="row vh-100 align-content-center">
-                <div class="col-10 w-100 mb-4">
-                    <h1 class="text-center display-2 fw-semibold">Proudly <strong
-                            class="strongText fst-italic fw-normal">crafted</strong> in <br> entire world since 1987</h1>
-                </div>
-                <div class="col-12 w-100">
-                    <p class="text-dark text-center fs-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Velit saepe quisquam atque voluptatem
-                        ipsam tenetur, excepturi repellat distinctio est quam inventore quae doloribus aliquid rerum,
-                        magni quos sequi. Delectus, cum.</p>
-                </div>
-            </div>
-
-        </header>
+            </section>
+        </main>
 
 
-
-
-
-
-
-        <!--Section Cards Articoli-->
-        <section class="mt-4">
-            <div class="container-fluid bg-light">
+        <footer>
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12 col-md-3">
-                        <!--Accordion-->
-                        <div class="accordion" id="accordionExample">
-                            <div class="accordion-item borderStyleAccordion">
-                                <h2 class="accordion-header " id="headingOne">
-                                    <button id="styleBtn" class="accordion-button position-relative fs-5" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                                        aria-controls="collapseOne">
-                                        All categories
-
-                                    </button>
-
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show"
-                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div id="radioContainer" class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="categories" id="All"
-                                                checked>
-                                            <label class="form-check-label" for="All">
-                                                All categories
-                                            </label>
+                    <div class="col-12">
+                        <div class="row vh-100 align-items-center justify-content-evenly">
+                            <div class="col-md-2 col-12 footerSocialCol">
+                                <div class="row">
+                                    <div class="col-12 mb-4">
+                                        <div class="iconFooter text-center">
+                                            <a href=""> <i class="borderIcon fs-2 fa-brands fa-twitter"></i></a>
                                         </div>
-
                                     </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item borderStyleAccordion">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed fs-5" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                                        aria-controls="collapseTwo">
-                                        Price
-
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <input id="inputRange" type="range" class="form-range" id="customRange1">
-                                        <div class="d-flex justify-content-between">
-                                            <p id="numberPriceMin" class="fs-5"></p>
-                                            <p id="numberPrice" class="fs-5"></p>
+                                    <div class="col-12 mb-4">
+                                        <div class="iconFooter text-center">
+                                            <a href=""><i class="borderIcon fs-2 fa-brands fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-4">
+                                        <div class="iconFooter text-center">
+                                            <a href=""><i class="borderIcon fs-2 fa-brands fa-instagram"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="iconFooter text-center">
+                                            <a href=""><i class="borderIcon fs-2 fa-brands fa-facebook"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-item borderStyleAccordion">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed fs-5" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">
-                                        Word
-
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse"
-                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <div class="input-group mb-3">
-                                            <input id="wordInput" type="text" class="form-control fs-5"
-                                                placeholder="" aria-label="Username"
-                                                aria-describedby="basic-addon1">
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="col-md-2 col-12 h-25 d-flex flex-column justify-content-center footerSocialCol">
+                                <h3 class="fs-2 text-uppercase">Company</h3>
+                                <p class="fs-4">Lorem ipsum</p>
+                                <p class="fs-4">Dolor sit amet</p>
+                                <p class="fs-4">Sed odio cras</p>
+                                <p class="fs-4">Donec sed dui</p>
                             </div>
-                        </div>
-                        <!--Fine Accordion-->
-                    </div>
-                    <!--Cards-->
-                    <div class="col-12 col-md-9">
-                        <!--Container per lo sviluppo degli articoli-->
-                        <div class="row wrapperCard">
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </section>
-    </main>
-
-
-
-
-
-
-
-
-    <footer>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="row vh-100 align-items-center justify-content-evenly">
-                        <div class="col-md-2 col-12 footerSocialCol">
-                            <div class="row">
-                                <div class="col-12 mb-4">
-                                    <div class="iconFooter text-center">
-                                        <a href=""> <i class="borderIcon fs-2 fa-brands fa-twitter"></i></a>
-                                    </div>
-                                </div>
-                                <div class="col-12 mb-4">
-                                    <div class="iconFooter text-center">
-                                        <a href=""><i class="borderIcon fs-2 fa-brands fa-linkedin-in"></i></a>
-                                    </div>
-                                </div>
-                                <div class="col-12 mb-4">
-                                    <div class="iconFooter text-center">
-                                        <a href=""><i class="borderIcon fs-2 fa-brands fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="iconFooter text-center">
-                                        <a href=""><i class="borderIcon fs-2 fa-brands fa-facebook"></i></a>
-                                    </div>
-                                </div>
+                            <div class="col-md-2 col-12 h-25 d-flex flex-column justify-content-center footerSocialCol">
+                                <h3 class="fs-2 text-uppercase">Products</h3>
+                                <p class="fs-4">Lorem ipsum</p>
+                                <p class="fs-4">Dolor sit amet</p>
+                                <p class="fs-4">Sed odio cras</p>
+                                <p class="fs-4">Donec sed dui</p>
                             </div>
-                        </div>
-                        <div class="col-md-2 col-12 h-25 d-flex flex-column justify-content-center footerSocialCol">
-                            <h3 class="fs-2 text-uppercase">Company</h3>
-                            <p class="fs-4">Lorem ipsum</p>
-                            <p class="fs-4">Dolor sit amet</p>
-                            <p class="fs-4">Sed odio cras</p>
-                            <p class="fs-4">Donec sed dui</p>
-                        </div>
-                        <div class="col-md-2 col-12 h-25 d-flex flex-column justify-content-center footerSocialCol">
-                            <h3 class="fs-2 text-uppercase">Products</h3>
-                            <p class="fs-4">Lorem ipsum</p>
-                            <p class="fs-4">Dolor sit amet</p>
-                            <p class="fs-4">Sed odio cras</p>
-                            <p class="fs-4">Donec sed dui</p>
-                        </div>
-                        <div class="col-md-2 col-12 h-25 d-flex flex-column justify-content-center footerSocialCol">
-                            <h3 class="fs-2 text-uppercase">Resources</h3>
-                            <p class="fs-4">Lorem ipsum</p>
-                            <p class="fs-4">Dolor sit amet</p>
-                            <p class="fs-4">Sed odio cras</p>
-                            <p class="fs-4">Donec sed dui</p>
+                            <div class="col-md-2 col-12 h-25 d-flex flex-column justify-content-center footerSocialCol">
+                                <h3 class="fs-2 text-uppercase">Resources</h3>
+                                <p class="fs-4">Lorem ipsum</p>
+                                <p class="fs-4">Dolor sit amet</p>
+                                <p class="fs-4">Sed odio cras</p>
+                                <p class="fs-4">Donec sed dui</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+
+
+    </div>
 
 
 
-    </main>
+
+
+
 
 
 

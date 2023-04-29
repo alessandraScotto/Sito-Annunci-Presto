@@ -35,6 +35,25 @@ offcanvas.addEventListener('click', () => {
 })
 
 
+//Pulsante scroll to Top
+let progress = document.querySelector('#progress');
+
+progress.addEventListener('click', () => {
+    document.documentElement.scrollTop = 0;
+})
+
+//Apertura e chiusura Siderbar Shopping Cart
+let closeBtn = document.querySelector('#closeBtn');
+let sidebar = document.querySelector('.sidebar');
+let openCart = document.querySelector('#openCart');
+
+openCart.addEventListener('click', () => {
+    sidebar.style.right = '0%';
+})
+
+closeBtn.addEventListener('click', () => {
+    sidebar.style.right = '-30%';
+})
 
 
 //Sviluppo cards articoli
@@ -87,15 +106,16 @@ fetch('../annunci.json')
                 let div = document.createElement('div');
                 div.classList.add('col-sm-6', 'col-md-4', 'col-lg-3', 'mt-4');
                 div.innerHTML = `
-            <div class="card w-100 borderStyle" style="width: 18rem;">
+            <div id="${annuncio.id}" class="card w-100 borderStyle" style="width: 18rem;">
                                     <img src="../img/${annuncio.img}" class="card-img-top w-100" alt="...">
                                     <div class="card-body d-flex justify-content-between">
                                         <div>
                                             <p class="text-uppercase fs-5 fw-semibold">${annuncio.name}</p>
                                             <p class="card-text fs-5">${annuncio.category}</p>
                                         </div>
-                                        <div class="d-flex  align-items-center">
-                                            <p class="fs-5 borderStyle p-1">${annuncio.price}&euro;</p>
+                                        <div class="d-flex flex-column align-items-center">
+                                            <p class="fs-5 ">${annuncio.price}&euro;</p>
+                                            <button id="btnADD" class="addToCart fs-6 rounded-1 borderStyle p-1">Add to Cart</button>
                                         </div>
                                     </div>
                                 </div>
@@ -107,6 +127,63 @@ fetch('../annunci.json')
         }
 
         createCards(data);
+
+        //ADD TO CART
+        let wrapperCart = document.querySelector('#wrapperCart');
+        let totalPrice = document.querySelector('#totalPrice');
+        let numberOfElement = document.querySelector('#numberOfElement');
+        const cart = [];
+
+        Array.from(document.querySelectorAll('#btnADD')).forEach((btn, i) => {
+            btn.addEventListener('click', () => {
+                let item = data.find((el) => data.indexOf(el) == i)
+                cart.push(item);
+                addToCartFunction(cart);
+                numberOfElement.innerHTML = `${cart.length}`
+
+            })
+        })
+        // data.forEach(el => console.log(el.id));
+
+        function addToCartFunction(array) {
+            wrapperCart.innerHTML = '';
+            array.forEach(product => {
+                let div = document.createElement('div');
+                div.classList.add('col-12');
+                div.innerHTML = `
+                <div class="card border-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-3">
+                                            <img src="../img/${product.img}" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="col-9">
+                                            <p class="lead fw-semibold">${product.name}</p>
+                                            <p>${product.category}<span>Unique</span></p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                            <p>${product.price}</p>
+                                            <i class="bi bi-trash3"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                </div>
+                <hr>
+                `
+                wrapperCart.appendChild(div);
+
+                //Funziona somma del totale del carrello
+                totalPrice.textContent = cart.reduce((tot, prodotto) => {
+                  tot += Math.floor(Number(prodotto.price))
+                  return tot
+                }, 0) + '€';
+
+                
+            })
+        }
+       
+
+      
+
+
 
         //FILTRI
 
@@ -213,7 +290,7 @@ fetch('../annunci.json')
         wordInput.addEventListener('input', () => {
             globalFilter();
         })
-        console.log(data.length);
+        // console.log(data.length);
 
         //Button clear filter
         let clearFilter = document.querySelector('#clearFilter');

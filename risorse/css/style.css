@@ -734,3 +734,64 @@ img {
     color: white;
 }
 
+/*Button add to Cart*/
+
+.addToCart {
+    background-color: white;
+    transition: 0.5s;
+    font-weight: bold;
+    color: var(--middleColorBeige);
+    
+}
+
+.addToCart:hover {
+  background-color: var(--middleColorBeige);
+  color: white;
+  font-weight: bold;
+}
+
+.btnCart {
+    border: none;
+}
+
+.btnCart:nth-child(1) {
+    color: var(--secColor);
+}
+
+.sidebar {
+    width: 30%;
+    background-color: white;
+    position: fixed;
+    right: -30%;
+    top: 0;
+    transition: 0.5s;
+    z-index: 3;
+    overflow-y: scroll;
+    
+}
+
+/*Scrollbar Style*/
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    background-color: white;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--middleColorBeige); 
+    border-radius: 10px;
+
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--mainColor); 
+  }
+ 

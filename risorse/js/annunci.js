@@ -62,7 +62,6 @@ fetch('../annunci.json')
     .then(data => {
         //Data = array di annunci
 
-
         //Funzione per estrapolare le categorie e renderle visibili sull'Accordion
         let radioContainer = document.querySelector('#radioContainer');
         let wrapperCard = document.querySelector('.wrapperCard');
@@ -106,7 +105,7 @@ fetch('../annunci.json')
                 let div = document.createElement('div');
                 div.classList.add('col-sm-6', 'col-md-4', 'col-lg-3', 'mt-4');
                 div.innerHTML = `
-            <div id="${annuncio.id}" class="card w-100 borderStyle" style="width: 18rem;">
+            <div  class="card w-100 borderStyle" style="width: 18rem;">
                                     <img src="../img/${annuncio.img}" class="card-img-top w-100" alt="...">
                                     <div class="card-body d-flex justify-content-between">
                                         <div>
@@ -115,7 +114,7 @@ fetch('../annunci.json')
                                         </div>
                                         <div class="d-flex flex-column align-items-center">
                                             <p class="fs-5 ">${annuncio.price}&euro;</p>
-                                            <button id="btnADD" class="addToCart fs-6 rounded-1 borderStyle p-1">Add to Cart</button>
+                                            <button data-id="${annuncio.id}" class="addToCart btn-add fs-6 rounded-1 borderStyle p-1">Add to Cart</button>
                                         </div>
                                     </div>
                                 </div>
@@ -128,12 +127,94 @@ fetch('../annunci.json')
 
         createCards(data);
 
-        //ADD TO CART
-        let wrapperCart = document.querySelector('#wrapperCart');
+        //ADD TO CART 
         let totalPrice = document.querySelector('#totalPrice');
         let numberOfElement = document.querySelector('#numberOfElement');
-        const cart = [];
+        //Wrapper per appendere le card nel carrello
+        let wrapperCart = document.getElementById("wrapperCart");
+        //Catturiamo tutti i button delle card che avranno la stessa classe
+        let addToCartButtons = document.querySelectorAll(".btn-add");
 
+
+        let cart = [];
+   
+        //Creiamo una funzione che su tutti i button ascolti l'evento del click e per ognuno ne catturi
+        //il data-id, così da pusharlo nell'array cart
+        function addButtonListener(buttons) {
+            buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                    let itemId = button.dataset.id;
+                    let item = data.find(item => item.id == itemId);
+                    cart.push(item);
+                    console.log(itemId);
+                    //Aggiungiamo le card al carrello dall'array cart
+                    addToCartFunction(cart);
+                    //Numero di elementi presenti nel carrello che vengono mostratii sull'icona
+                    numberOfElement.innerHTML = `${cart.length}`
+                });
+            });
+
+        }
+
+        addButtonListener(addToCartButtons);
+
+
+        //Funzione che aggiunge le card al carrello da un array di partenza (nel mio caso cart)
+        function addToCartFunction(array) {
+            wrapperCart.innerHTML = '';
+            array.forEach(product => {
+                let div = document.createElement('div');
+                div.classList.add('col-12');
+                div.innerHTML = `
+                <div class="card border-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-3">
+                                            <img src="../img/${product.img}" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="col-9">
+                                            <p class="lead fw-semibold">${product.name}</p>
+                                            <p>${product.category}<span class="ms-1">Unique size</span></p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                            <p>${product.price} &euro;</p>
+                                            <i class="bi bi-trash3"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                </div>
+                <hr>
+                `
+                wrapperCart.appendChild(div);
+
+                //Aggiungo il listener di eventi per rimuovere i prodotti dal carrello
+                let removeButton = div.querySelector(".bi-trash3");
+                removeButton.addEventListener("click", () => {
+                    removeFromCartFunction(product.id);
+                });
+
+                //Funziona somma del totale del carrello
+                totalPrice.textContent = cart.reduce((tot, prodotto) => {
+                    tot += Number(prodotto.price)
+                    return tot
+                }, 0).toFixed(2) + '€';
+            })
+            // Reimposta il prezzo totale a zero se il carrello è vuoto
+            if (array.length === 0) {
+                totalPrice.textContent = '0€';
+            }
+        }
+
+        //Funzione per rimuovere prodotti
+        function removeFromCartFunction(productId) {
+            let index = cart.findIndex(product => product.id == productId);
+            if (index > -1) {
+                cart.splice(index, 1);
+                addToCartFunction(cart);
+                numberOfElement.innerHTML = `${cart.length}`;
+            }
+        }
+
+
+        /*
         Array.from(document.querySelectorAll('#btnADD')).forEach((btn, i) => {
             btn.addEventListener('click', () => {
                 let item = data.find((el) => data.indexOf(el) == i)
@@ -158,9 +239,9 @@ fetch('../annunci.json')
                                         </div>
                                         <div class="col-9">
                                             <p class="lead fw-semibold">${product.name}</p>
-                                            <p>${product.category}<span>Unique</span></p>
+                                            <p>${product.category}<span class="ms-1">Unique size</span></p>
                                             <div class="d-flex justify-content-between align-items-center">
-                                            <p>${product.price}</p>
+                                            <p>${product.price} &euro;</p>
                                             <i class="bi bi-trash3"></i>
                                             </div>
                                         </div>
@@ -179,9 +260,10 @@ fetch('../annunci.json')
                 
             })
         }
-       
+    
+        */
 
-      
+
 
 
 
@@ -205,10 +287,9 @@ fetch('../annunci.json')
                 let filtered = array.filter(el => el.category == categorySelected);
                 return filtered; //Quando viene selezionata una categoria specifica
             }
-
-
         }
         //Mostra tutti gli annunci al caricamento iniziale della pagina
+
         filteredByCategory(data);
 
 
@@ -242,6 +323,7 @@ fetch('../annunci.json')
               ${maxPrice}&euro;
                 `
 
+
         }
 
         setPrice();
@@ -250,6 +332,7 @@ fetch('../annunci.json')
         function filteredByPrice(array) {
             let filtered = array.filter(el => Number(el.price) <= Number(inputRange.value));
             return filtered;
+
 
         }
 

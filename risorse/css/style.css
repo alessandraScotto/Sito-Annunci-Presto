@@ -794,4 +794,15 @@ img {
   ::-webkit-scrollbar-thumb:hover {
     background: var(--mainColor); 
   }
+
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: row !important;
+      justify-content: space-between !important;
+      align-items: center;
+      width: 100%;
+      height: min-content !important;
+      padding-right: 5px;
+    }
+  }
  

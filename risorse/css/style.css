@@ -806,3 +806,17 @@ img {
     }
   }
  
+  /*Btn rimozione oggetti dal carrello*/
+  .colorBtnCart {
+    color: var(--mainColor);
+    transition: 0.4s;
+  }
+
+  .colorBtnCart:hover {
+    color: var(--accColor);
+
+  }
+
+  .yourOrder {
+    color: var(--grayLight);
+  }

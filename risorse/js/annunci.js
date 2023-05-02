@@ -125,7 +125,7 @@ fetch('../annunci.json')
 
                 wrapperCard.appendChild(div);
             })
-           addToCartButtons = document.querySelectorAll(".btn-add");
+            addToCartButtons = document.querySelectorAll(".btn-add");
         }
 
         createCards(data);
@@ -151,10 +151,12 @@ fetch('../annunci.json')
                                         </div>
                                         <div class="col-9">
                                             <p class="lead fw-semibold">${product.name}</p>
-                                            <p>${product.category}<span class="ms-1">Unique size</span></p>
+                                            <p class="lead muted">${product.category} |<span class="ms-1 lead fw-semibold">Unique size</span></p>
                                             <div class="d-flex justify-content-between align-items-center">
-                                            <p>${product.price} &euro;</p>
-                                            <i class="bi bi-trash3"></i>
+                                            <p class="fs-5">${product.price} &euro;</p>
+                                             <div class="fs-4 btn">
+                                             <i class="bi bi-trash3 colorBtnCart"></i>
+                                              </div>
                                             </div>
                                         </div>
                                     </div>

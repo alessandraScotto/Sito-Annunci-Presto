@@ -65,6 +65,8 @@ fetch('../annunci.json')
         //Funzione per estrapolare le categorie e renderle visibili sull'Accordion
         let radioContainer = document.querySelector('#radioContainer');
         let wrapperCard = document.querySelector('.wrapperCard');
+        //Catturiamo tutti i button delle card che avranno la stessa classe
+        let addToCartButtons = null;
 
         function setCategory() {
             let uniqueCategories = [];
@@ -123,6 +125,7 @@ fetch('../annunci.json')
 
                 wrapperCard.appendChild(div);
             })
+           addToCartButtons = document.querySelectorAll(".btn-add");
         }
 
         createCards(data);
@@ -132,31 +135,6 @@ fetch('../annunci.json')
         let numberOfElement = document.querySelector('#numberOfElement');
         //Wrapper per appendere le card nel carrello
         let wrapperCart = document.getElementById("wrapperCart");
-        //Catturiamo tutti i button delle card che avranno la stessa classe
-        let addToCartButtons = document.querySelectorAll(".btn-add");
-
-
-        let cart = [];
-   
-        //Creiamo una funzione che su tutti i button ascolti l'evento del click e per ognuno ne catturi
-        //il data-id, così da pusharlo nell'array cart
-        function addButtonListener(buttons) {
-            buttons.forEach(button => {
-                button.addEventListener("click", () => {
-                    let itemId = button.dataset.id;
-                    let item = data.find(item => item.id == itemId);
-                    cart.push(item);
-                    console.log(itemId);
-                    //Aggiungiamo le card al carrello dall'array cart
-                    addToCartFunction(cart);
-                    //Numero di elementi presenti nel carrello che vengono mostratii sull'icona
-                    numberOfElement.innerHTML = `${cart.length}`
-                });
-            });
-
-        }
-
-        addButtonListener(addToCartButtons);
 
 
         //Funzione che aggiunge le card al carrello da un array di partenza (nel mio caso cart)
@@ -202,6 +180,29 @@ fetch('../annunci.json')
                 totalPrice.textContent = '0€';
             }
         }
+
+        let cart = [];
+
+        //Creiamo una funzione che su tutti i button ascolti l'evento del click e per ognuno ne catturi
+        //il data-id, così da pusharlo nell'array cart
+        function addButtonListener(buttons) {
+            buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                    let itemId = button.dataset.id;
+                    let item = data.find(item => item.id == itemId);
+                    cart.push(item);
+                    //console.log(itemId);
+                    //Aggiungiamo le card al carrello dall'array cart
+                    addToCartFunction(cart);
+                    console.log(cart);
+                    //Numero di elementi presenti nel carrello che vengono mostratii sull'icona
+                    numberOfElement.innerHTML = `${cart.length}`
+                });
+            });
+
+        }
+
+        addButtonListener(addToCartButtons);
 
         //Funzione per rimuovere prodotti
         function removeFromCartFunction(productId) {
@@ -287,6 +288,7 @@ fetch('../annunci.json')
                 let filtered = array.filter(el => el.category == categorySelected);
                 return filtered; //Quando viene selezionata una categoria specifica
             }
+
         }
         //Mostra tutti gli annunci al caricamento iniziale della pagina
 
@@ -355,7 +357,10 @@ fetch('../annunci.json')
             let resultFilteredByPrice = filteredByPrice(resultFilteredByCategory);
             let resultFilteredByWord = filteredByWord(resultFilteredByPrice);
 
+
             createCards(resultFilteredByWord);
+            addButtonListener(addToCartButtons);
+
 
         }
 
